@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Crazyforus, free Wedding Web Sites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="ico/favicon.png">
+		<style type="text/css">
+				.admin-textarea{width:100%;}
+		</style>
+  </head>
+
+  <body>
+    <div class="container">
+				<div class="row">
+						<div class="span12" style="backround-color:#eee;">
+								<h1 style="margin-top:0px;"><a href="/">Crazyforus</a></h1>
+						</div>	
+				</div>
+
+		<!-- Main / Latest Articles -->
+      <div class="row">
+        <div class="span5">
+						<h3>{{ data.title|safe }}</h3>
+						{{ data.article_text|safe }}
+       </div>
+        <div class="span7">
+						{% for img in art_images %}
+								<div style="float: left;"><img class="thumbnail article-image" src="{{ img.image_link }}/{{ img.image_name }}" />	</div>
+						{% endfor %}
+        </div>
+		  </div>
+      <hr>
+
+      <footer>
+        <p>&copy; 2013 eWedding Solutions</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+		<script src="/static/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript">
+					$(function() {
+						$( "#id_publish_datetime" ).datepicker({ dateFormat: "yy-mm-dd", altFormat: "yy-mm-dd"});
+					});
+						{% for image in art_images %}
+								$("#test_place").append('<div id="{{ image.image_name }}" class="display-article-image"><button onClick="delete_recent({{ image.id }})">Delete</button><br /><img class="display-article-image" src="{{ image.image_link }}/{{ image.image_name }}" /></div>')
+						{% endfor %}
+				function checkURL(value) {
+						var urlregex = new RegExp("^(http:\/\/www.|https:\/\/www.|ftp:\/\/www.|www.){1}([0-9A-Za-z]+\.)");
+						if (value.length > 0){
+								if (urlregex.test(value)) {
+										return (true);
+								}
+								return (true);
+						}
+						return false
+				}
+
+				function add_new_image_input(){
+						count = 1;
+						for (count;count<100;count++){
+								if ($("#article_image_name"+count).length <= 0){
+										return "article_image_name"+count
+								}
+						}
+						return false;
+				}
+			
+				function add_image_to_article(image){
+						input_name = add_new_image_input();
+						$("#article_form").append('<input type="hidden" id="'+ input_name + '" name="'+ input_name + '" value="'+ image +'"/>')						
+				}
+
+				function delete_recent(image){
+						$.ajax({
+								url: "/aggregator/delete_recent",
+								type: "GET",
+								async: "false",
+								data: "filename="+image,
+								success: function(msg){
+										if (msg=='error'){
+												//TODO make an error pop up
+										} else {
+												$("#"+image).remove()
+										}
+								},
+						});
+				}	
+				function fetchImage(image_link){
+						$.ajax({
+								url: "/aggregator/fetchimage",
+								type: "GET",
+								async: "false",
+								data: "url="+image_link,
+								success: function(msg){
+										var image_info = msg.split(",");
+										image_location = image_info[1];
+										image_name = image_info[0];
+										$("#test_place").append('<div id="'+image_name+'" class="display-article-image"><button onClick="delete_recent('+image_name+')">Delete</button><br /><img class="display-article-image" src="'+ image_location +'/'+image_name+'" /></div>')
+										add_image_to_article(image_location, image_name);
+										$("#id_article_image").val('');
+										//TODO add something that states the image as saved.
+										//TODO allow ability to delete an image
+										
+								},
+								fail: function(){
+										alert("Failed");
+								},
+								error: function(){
+										alert("Error");
+								}
+						});
+				}
+
+				$(document).ready(function(){
+						$("#id_article_image").on("input", function(){
+								image_link = $(this).val()
+								if (checkURL(image_link)){
+										fetchImage(image_link);
+								} else {
+										alert("Not a url: " + image_link);
+								}
+						});
+				});
+		</script>
+  </body>
+</html>
+

@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+				{% block main_content %}
+            <!-- start:container -->
+            <div class="container">
+                
+                <!-- start:page content -->
+                <div id="page-content" class="clearfix">
+                    
+                    <!-- start:main -->
+                    <div id="main" class="article">
+                        
+                        <!-- start:article-post -->
+                        <article id="article-post" class="cat-sports">
+                            
+												<!--
+                            <div class="head-image thumb-wrap relative">
+                                <a href="article-sport.php"><img src="images/dummy/770x470.jpg" width="770" height="470" alt="Responsive image" class="img-responsive" /></a>
+                                <a href="#" class="theme">
+                                    Football
+                                </a>
+                            </div>
+														-->
+                            
+                            <header>
+                                <ol class="breadcrumb">
+																	{% for category in categories %}
+																		<li><a href="/category/{{ category}}">{{ category|safe }}</a></li>
+																	{% endfor %}
+                                </ol>
+																<h1>{{ post.0.post_title|safe }}</h1>
+																<h4>{{ post.0.post_date }}</h4>
+                            </header>
+                            
+														{{ post_content|safe }}
+
+                            
+                                                        <!-- start:article footer -->
+                            <footer>
+                                <h3>Share this article</h3>
+                                
+                                <a href="http://www.twitter.com/crazyforus" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                                <a href="https://www.facebook.com/crazyforus" target="_blank"><i class="fa fa-facebook-square fa-lg"></i></a>
+                                <a href="http://www.pinterest.com/crazyforus" target="_blank"><i class="fa fa-pinterest-square fa-lg"></i></a>
+																<!-- 
+                                <a href=""><i class="fa fa-linkedin-square fa-lg"></i></a>
+                                <a href=""><i class="fa fa-google-plus-square fa-lg"></i></a>
+                                <a href=""><i class="fa fa-vimeo-square fa-lg"></i></a>
+                                <a href=""><i class="fa fa-youtube fa-lg"></i></a>
+																-->
+                                
+                                <!-- start:article author-box -->
+																<!--
+                                <div class="author-box">
+                                    <img src="images/dummy/115x115.jpg" width="115" height="115" alt="" class="img-circle" />
+                                    <p class="name">Michael Jonathan Doe</p>
+                                    <p>In pretium tempor consequat. Mauris varius, ligula non commodo interdum, dolor velit faucibus risus, vel mattis nibh nunc cursus ipsum. Vestibulum sed erat eget libero gravida auctor. Vivamus et elit sollicitudin, condimentum.</p>
+                                </div>
+																-->
+                                <!-- end:article author-box -->
+                            </footer>
+                            <!-- end:article footer -->                            
+                        </article>
+                        <!-- end:article-post -->
+                        
+												<!-- start:related-posts -->
+													<!-- TODO ADD RELATED POSTS HERE -->
+                        <!-- end:related-posts -->                        
+
+                    </div>
+                    <!-- end:main -->
+                    
+                                        <!-- start:sidebar -->
+                    <div id="sidebar">
+                        
+                        <!-- start:advertising -->
+                        <div class="ad">
+													<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+													<!-- New Home Page #3 -->
+													<ins class="adsbygoogle"
+														     style="display:inline-block;width:300px;height:250px"
+																      data-ad-client="ca-pub-1786435203633874"
+																			     data-ad-slot="7358679629"></ins>
+																				 <script>
+																					 (adsbygoogle = window.adsbygoogle || []).push({});
+																				 </script>
+                        </div>
+                        <!-- end:advertising -->
+
+												<div class="ad">
+													<!-- After Six Wedding Dresses   Banner ID 351807  250x250 (to replace the post on right) -->
+													<a target="_blank" href="http://www.shareasale.com/r.cfm?b=351807&amp;u=471322&amp;m=33226&amp;urllink=&amp;afftrack="><img src="http://static.shareasale.com/image/33226/image005_00.jpg" border="0" /></a> 
+												</div>
+												<div class="ad">
+													<!-- destination & informal bridal styles   Banner ID 478210   300x250 -->
+													<a target="_blank" href="http://www.shareasale.com/r.cfm?b=478210&amp;u=471322&amp;m=33226&amp;urllink=&amp;afftrack="><img src="http://static.shareasale.com/image/33226/bridal_banners_v3.jpg" border="0" alt="wedding dress, gowns, dessy, bride" /></a>
+												</div>
+												<div class="ad">
+												<!-- Holiday Card Luxe    tiny prints special promotion -->
+													<a target="_blank" href="http://www.shareasale.com/r.cfm?b=140728&u=471322&m=12808&urllink=&afftrack="><img src="http://www.shareasale.com/image/12808/300x250Holiday_5Percent1.gif" border="0"></a>
+												</div>
+                        
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Winter Weddings</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:article-container -->
+                            <div class="article-container">
+															{% for article in seasonal_weddings %}
+                                <!-- start:article -->
+                                <article class="clearfix">
+																	<div class="image-wrapper-case">
+																		<div class="image-wrapper-100">
+																			<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" alt="" /></a>
+																		</div>
+																	</div>
+																		<span class="published">{{ article.post_date }}</span>
+																		<h3><a href="/articles/{{ article.slug }}">{{ article.post_content|safe }}</a></h3>
+                                </article>
+                                <!-- end:article -->
+															{% endfor %}
+                            </div>
+                            <!-- end:article-container -->
+                        </section>
+                        <!-- end:section-module-news -->
+
+                        <!-- start:section-module-quote -->
+                        <section class="module-quote">
+                            <!-- start:header -->
+                            <header>
+                                <h2>beautiful quote</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:blockquote-quote -->
+                            <blockquote>
+															<p>There is no more lovely, friendly and charming relationship, communion or company than a good marriage.</p>
+                                <footer>Martin Luther King</footer>
+                            </blockquote>
+                            <!-- end:blockquote-quote -->
+                        </section>
+                        <!-- end:section-module-quote -->
+                        
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin">
+                            <!-- start:header -->
+                            <header>
+																<h2>Wedding Hair </h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:article-container -->
+                            <div class="article-container">
+															{% for article in wedding_hair %}
+                                <!-- start:article -->
+                                <article class="clearfix">
+																		<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" width="100" height="80" alt="" /></a>
+																		<span class="published">{{ article.post_date }}<span class="category cat-sports"><a href="#">{{ article.categories.0 }}</a></span></span>
+																		<h3><a href="/articles/{{ artlicle.slug }}">{{ article.post_content }}</a></h3>
+                                </article>
+                                <!-- end:article -->
+															{% endfor %}
+                            </div>
+                            <!-- end:article-container -->
+                        </section>
+                        <!-- end:section-module-news -->
+                        
+                        <!-- start:advertising -->
+                        <div class="ad ad-separator">
+													<ins class="adsbygoogle"
+														     style="display:inline-block;width:300px;height:250px"
+																      data-ad-client="ca-pub-1786435203633874"
+																			     data-ad-slot="7358679629"></ins>
+																				 <script>
+																					 (adsbygoogle = window.adsbygoogle || []).push({});
+																				 </script>
+                        </div>
+                        <!-- end:advertising -->
+                        
+
+                        
+                    </div>
+                    <!-- end:sidebar -->                    
+                </div>
+                <!-- end:page content -->
+            
+            </div>
+            <!-- end:container -->
+						{% endblock %}

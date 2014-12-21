@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+				{% block main_content %}
+
+            <!-- start:container -->
+            <div class="container">
+                
+                <!-- start:page content -->
+                <div id="page-content" class="clearfix">
+                    
+                    <!-- start:main -->
+                    <div id="main">
+                        
+                        <!-- start:row -->
+                        <div class="row">
+                            
+                            <!-- start:col -->
+                            <div class="col-md-9 separator-right">
+                                
+															{% for article in articles %}
+                                <!-- start:row -->
+																{% cycle '<!-- START ROW --><div class="row">' '' %}
+                                    
+                                    <!-- start:col -->
+                                    <div class="col-sm-6">
+                                        <!-- start:article.linkbox -->
+																				<article class="linkbox large cat-showtime">
+																					<div class="image-wrapper-265" style="background-color: #FFEBFF;overlay: hidden;">
+																							<a href="/articles/{{ article.slug }}">
+																								<img src="{{ article.featured_image }}" alt="Responsive image" class="img-responsive" />
+																									<div class="overlay">
+																											<h2>{{ article.title }}</h2>
+																									</div>
+																							</a>
+																							<a href="/category/{{ article.categories.0}}" class="theme">
+																									{{ article.categories.0|safe }}
+																							</a>
+																					</div>
+																				</article>
+                                        <!-- end:article.linkbox -->
+                                    </div>
+                                    <!-- end:col -->
+																		{% cycle '' '</div> <!-- END ROW -->' %}
+                                <!-- end:row -->
+																{% endfor %}
+                                
+                                
+                                <!-- start:load-more -->
+                                <div class="text-center">
+                                    <a href="#" class="show-more cat-showtime" title="Show More News">Show More News</a>
+                                </div>
+                                <!-- end:load-more -->
+                                
+                            </div>
+                            <!-- end:col -->
+                            
+                            <!-- start:col -->
+                            <div class="col-md-3">
+                                
+                                                                <!-- start:latest-news -->
+                                <section class="section-news news-layout">
+                                    <!-- start:header -->
+                                    <header>
+                                        <h2><a href="#">Photo Ideas</a></h2>
+                                        <span class="borderline"></span>
+                                    </header>
+                                    <!-- end:header -->
+                                    
+                                    <!-- start:row -->
+                                    <div class="row">
+																		{% for article in photo_ideas %}
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+																							<h3><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h3>
+																							<span class="text">{{ article.post_content|slice:":100" }}...</span>                                                                                    
+																							<span class="published">{{ article.post_date }}</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+																		{% endfor %}
+
+                                    </div>
+                                    <!-- end:row -->
+                                </section>
+                                <!-- end:latest-news -->                                
+																<!--
+                                <div class="ad">
+                                    <a href=""><img src="images/dummy/banner_160x600.png" width="160" height="600" alt="" /></a>
+                                </div>
+																-->
+                                
+                                                                <!-- start:latest-news -->
+                                <section class="news-layout">
+                                    <!-- start:header -->
+                                    <header>
+                                        <h2>Centerpieces</h2>
+                                        <span class="borderline"></span>
+                                    </header>
+                                    <!-- end:header -->
+                                    
+                                    <!-- start:row -->
+                                    <div class="row">
+																		{% for article in centerpieces %}
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+																							<h3><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h3>
+																							<span class="text">{{ article.post_content|slice:":100" }}...</span>                                                                                    
+																							<span class="published">{{ article.post_date }}</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+																		{% endfor %}
+
+                                    </div>
+                                    <!-- end:row -->
+                                </section>
+                                <!-- end:latest-news -->                                
+                            </div>
+                            <!-- end:col -->
+                            
+                        </div>
+                        <!-- end:row -->
+        
+                        
+                    </div>
+                    <!-- end:main -->
+                    
+                                        <!-- start:sidebar -->
+                    <div id="sidebar">
+                        
+                        <!-- start:advertising -->
+                        <div class="ad">
+													<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+													<!-- New Home Page #3 -->
+													<ins class="adsbygoogle"
+														     style="display:inline-block;width:300px;height:250px"
+																      data-ad-client="ca-pub-1786435203633874"
+																			     data-ad-slot="7358679629"></ins>
+																				 <script>
+																					 (adsbygoogle = window.adsbygoogle || []).push({});
+																				 </script>
+                        </div>
+                        <!-- end:advertising -->
+
+												<div class="ad">
+													<!-- After Six Wedding Dresses   Banner ID 351807  250x250 (to replace the post on right) -->
+													<a target="_blank" href="http://www.shareasale.com/r.cfm?b=351807&amp;u=471322&amp;m=33226&amp;urllink=&amp;afftrack="><img src="http://static.shareasale.com/image/33226/image005_00.jpg" border="0" /></a> 
+												</div>
+												<div class="ad">
+													<!-- destination & informal bridal styles   Banner ID 478210   300x250 -->
+													<a target="_blank" href="http://www.shareasale.com/r.cfm?b=478210&amp;u=471322&amp;m=33226&amp;urllink=&amp;afftrack="><img src="http://static.shareasale.com/image/33226/bridal_banners_v3.jpg" border="0" alt="wedding dress, gowns, dessy, bride" /></a>
+												</div>
+												<div class="ad">
+												<!-- Holiday Card Luxe    tiny prints special promotion -->
+													<a target="_blank" href="http://www.shareasale.com/r.cfm?b=140728&u=471322&m=12808&urllink=&afftrack="><img src="http://www.shareasale.com/image/12808/300x250Holiday_5Percent1.gif" border="0"></a>
+												</div>
+                        
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Winter Weddings</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:article-container -->
+                            <div class="article-container">
+															{% for article in seasonal_weddings %}
+                                <!-- start:article -->
+                                <article class="clearfix">
+																	<div class="image-wrapper-case">
+																		<div class="image-wrapper-100">
+																			<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" alt="" /></a>
+																		</div>
+																	</div>
+																		<span class="published">{{ article.post_date }}</span>
+																		<h3><a href="/articles/{{ article.slug }}">{{ article.post_content|safe }}</a></h3>
+                                </article>
+                                <!-- end:article -->
+															{% endfor %}
+                            </div>
+                            <!-- end:article-container -->
+                        </section>
+                        <!-- end:section-module-news -->
+
+                        <!-- start:section-module-quote -->
+                        <section class="module-quote">
+                            <!-- start:header -->
+                            <header>
+                                <h2>beautiful quote</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:blockquote-quote -->
+                            <blockquote>
+															<p>There is no more lovely, friendly and charming relationship, communion or company than a good marriage.</p>
+                                <footer>Martin Luther King</footer>
+                            </blockquote>
+                            <!-- end:blockquote-quote -->
+                        </section>
+                        <!-- end:section-module-quote -->
+                        
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin">
+                            <!-- start:header -->
+                            <header>
+																<h2>Wedding Hair </h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:article-container -->
+                            <div class="article-container">
+															{% for article in wedding_hair %}
+                                <!-- start:article -->
+                                <article class="clearfix">
+																		<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" width="100" height="80" alt="" /></a>
+																		<span class="published">{{ article.post_date }}<span class="category cat-sports"><a href="#">{{ article.categories.0 }}</a></span></span>
+																		<h3><a href="/articles/{{ artlicle.slug }}">{{ article.post_content }}</a></h3>
+                                </article>
+                                <!-- end:article -->
+															{% endfor %}
+                            </div>
+                            <!-- end:article-container -->
+                        </section>
+                        <!-- end:section-module-news -->
+                        
+                        <!-- start:advertising -->
+                        <div class="ad ad-separator">
+													<ins class="adsbygoogle"
+														     style="display:inline-block;width:300px;height:250px"
+																      data-ad-client="ca-pub-1786435203633874"
+																			     data-ad-slot="7358679629"></ins>
+																				 <script>
+																					 (adsbygoogle = window.adsbygoogle || []).push({});
+																				 </script>
+                        </div>
+                        <!-- end:advertising -->
+                        
+
+                        
+                    </div>
+                    <!-- end:sidebar -->                    
+                </div>
+                <!-- end:page content -->
+            
+            </div>
+            <!-- end:container -->
+
+				{% endblock %}
+

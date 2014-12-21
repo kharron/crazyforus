@@ -1,0 +1,197 @@
+{% extends "aggregator/base.html" %}
+
+{% block css %}
+    <!-- Le styles -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+		<link href="/static/css/datepicker.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+{% endblock css %}
+{% block hero %}
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+
+        <h2>Free Wedding Websites!</h2>
+      	<p>Build customized free wedding websites.  It's all free!  </p>
+      </div>
+{% endblock hero %}
+
+{% block content_blocks %}
+		<div class="row">
+				<div class="span12">
+						{% for field in form %}
+								{% if field.errors %}
+										{{ field.name }}{{ field.errors }}
+								{% endif %}
+						{% endfor %}	
+				</div>
+		</div>
+		<div class="row">
+				<div class="span5"><h3>Registration Info</h3></span5></div>
+				<div class="span5"><h3>Wedding Info</h3></span5></div>
+				<div class="span5">
+						<form class="form-horizontal" method="POST" action="/register/add/" name="register_form">
+								{% csrf_token %}
+								<div class="control-group">
+										<label class="control-label" for="email">Email</label>
+										<div class="controls">
+												{{ form.email }}
+										</div>
+								</div>
+								<div class="control-group">
+										<label class="control-label" for="bfirstname">Bride</label>
+										<div class="controls">
+												{{ form.bfirstname }}
+										</div>
+								</div>
+								<div class="control-group">
+										<label class="control-label" for="blastname">Last name</label>
+										<div class="controls">
+												{{ form.blastname }}
+										</div>
+								</div>
+								<div class="control-group">
+										<label class="control-label" for="gfirstname">Groom</label>
+										<div class="controls">
+												{{ form.gfirstname }}
+										</div>
+								</div>
+								<div class="control-group">
+										<label class="control-label" for="glastname">Last Name</label>
+										<div class="controls">
+												{{ form.glastname}}
+										</div>
+								</div>
+								<div class="control-group">
+										<label class="control-label" for="websitename">Web Site Name</label>
+										<div class="controls">
+												{{ form.websitename}}
+										</div>
+										<div class="controls">
+												<div id="websitename_result"></div>	
+										</div>
+								</div>
+								<div class="control-group">
+										<label class="control-label" for="password">Password</label>
+										<div class="controls">
+												{{ form.password}}
+										</div>
+								</div>
+								<div class="control-group">
+										<label class="control-label" for="confirm_password">Confirm Password</label>
+										<div class="controls">
+												<input name="confirm_password" placeholder="Confirm Password" type="password" />
+										</div>
+								</div>
+				</div>
+				<div class="span5 form-horizontal">
+								<div class="control-group">
+										<label class="control-label" for="zipcode">Zipcode</label>
+										<div class="controls">
+												{{ form.zipcode}}
+										</div>
+								</div>
+				</div>
+				<div class="span5">
+								<div class="centered-header" style="width:100%;text-align:center;font-weight:bold;">-- OR --</div>
+				</div>
+				<div class="span5 form-horizontal">
+								<div class="control-group">
+										<label class="control-label" for="city">City</label>
+										<div class="controls">
+												{{ form.city}}
+										</div>
+								</div>
+								<div class="control-group">
+										<label class="control-label" for="state">State</label>
+										<div class="controls">
+												{{ form.state}}
+										</div>
+								</div>
+								<div class="control-group">
+										<label class="control-label" for="weddingdate">Wedding Date</label>
+										<div class="controls">
+												<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  <!-- <input class="span2" size="16" type="text" value="12-02-2012">-->
+														{{ form.weddingdate }}
+														<span class="add-on"><i class="icon-th"></i></span>
+												</div>	
+										</div>
+								</div>
+								<div class="control-group">
+										<div class="controls">
+												<input type="submit" class="btn btn-primary" value="Submit" />
+										</div>
+								</div>
+						</form>
+				</div>
+		
+				<div class="span2">
+						Image of template
+				</div>
+		</div>
+{% endblock content_blocks %}
+
+{% block javascripts %}
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+		<script src="/static/js/bootstrap-datepicker.js"></script>
+		<script type="text/javascript">
+				$(document).ready(function(){
+				//Wedding Date
+						$("#id_weddingdate").datepicker({
+								format:'mm/dd/yyyy'
+						});
+				
+				//Website name details
+						$("#id_websitename").keypress(function(){
+								websitename = $("#id_websitename").val()
+								if (websitename.length > 3){
+										//Strip website name of all unallowed characters
+										websitename = websitename.replace(/ /g,"");
+										$("#id_websitename").val(websitename);
+										$.ajax({
+											type:"GET",
+												url: "/register/websitecheck/",
+												data:"websitename="+websitename,
+												success: function(result){
+														if (result == false){
+																$("#websitename_result").html(websitename+" is available")
+														}
+												}
+										});
+								}
+						});
+					//Location Stuff	
+						$("#id_zipcode").keyup(function(){
+								zipcode = $("#id_zipcode").val()
+								if (zipcode.length == 5){
+										$.ajax({
+												type:"GET",
+												url:"/register/getcity/",
+												data:"zipcode="+zipcode,
+												success: function(result){
+														//result should be city,state OR none
+														if (result.indexOf(",") >= 0){
+																wedlocation = result.split(",");
+																city = wedlocation[1];
+																state = wedlocation[0];
+																$("#id_city").val(city);
+																$("#id_state option:selected").val(state);
+																$("#id_state").val(state);
+														}
+												}
+										});	
+								}	
+						});
+				});
+		</script>
+{% endblock javascripts %}

@@ -1,0 +1,1861 @@
+<!doctype html >
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+    <!-- start:global -->
+    <meta charset="utf-8">
+    <!-- end:global -->
+
+    <!-- start:page title -->
+		<title>{% block title %}Crazyforus - The best of Wedding on the Web {% endblock %}</title>
+    <!-- end:page title -->
+    
+    <!-- start:meta info -->
+		<meta name="keywords" content="Wedding, Wedding ideas, Wedding Vendors, Wedding Websites, Wedding Web Sites, Wedding Favors" />
+		<meta name="description" content="An aggregation of the best of wedding articles around the web" />
+    <meta name="author" content="crazyforus.com">
+    <!-- end:meta info -->
+
+    <!-- start:responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- end:responsive web design -->
+    
+    <!-- start:web fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,500italic,400italic,700,700italic%7CRoboto+Condensed:400,700%7CRoboto+Slab' rel='stylesheet' type='text/css'>
+    <!-- end:web fonts -->
+
+		{% block stylesheets %}
+    <!-- start:stylesheets -->
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/css/weather-icons.min.css">
+    <link rel="stylesheet" href="/static/assets/css/jquery.sidr.dark.css">
+    <link rel="stylesheet" href="/static/assets/css/photobox.css">
+    <link rel="stylesheet" href="/static/assets/css/datepicker.css">
+    <link rel="stylesheet" href="/static/assets/css/wp_style.css">
+    <link rel="stylesheet" href="/static/assets/css/colors.css">
+    
+    <!-- end:stylesheets -->
+
+    <!--[if lte IE 8]>
+    <script src="/static/assets/js/respond.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/static/assets/css/photobox.ie.css">
+    <script src="/static/assets/js/html5shiv.js"></script>
+    <![endif]-->
+		{% endblock %}
+</head>
+<body>
+    
+    <!-- start:page outer wrap -->
+    <div id="page-outer-wrap">
+        <!-- start:page inner wrap -->
+        <div id="page-inner-wrap">        
+            
+						{% block mobile_header %}
+            <!-- start:page header mobile -->
+            <header id="page-header-mobile" class="visible-xs">
+                
+                <!-- start:sidr -->
+                <div id="sidr">
+                    <form id="search-form-mobile">
+                        <input type="text" name="qsearch" placeholder="Search weekly news" />
+                    </form>
+                    <ul>
+                        <li class="cat-news">
+                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
+                            <a href="#">Dresses</a>
+                            <ul class="subnav-menu">
+                                <li><a href="#">Rings</a></li>
+                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">Elections</a></li>
+                                <li><a href="#">Opinions</a></li>
+                                <li><a href="#">Lorem ipsum</a></li>
+                                <li><a href="#">Dolor sit amet</a></li>
+                                <li><a href="#">Photo galleries</a></li>
+                            </ul>               
+                        </li>
+                        <li class="cat-sports">
+                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
+                            <a href="category-1.html">Sports</a>
+                            <ul>
+                                <li><a href="#">Football</a></li>
+                                <li><a href="#">Pro Basketball</a></li>
+                                <li><a href="#">College Basketball</a></li>
+                                <li><a href="#">Hockey</a></li>
+                                <li><a href="#">Baseball</a></li>
+                                <li><a href="#">Soccer</a></li>
+                                <li><a href="#">Photo galleries</a></li>
+                            </ul>
+                        </li>
+                        <li class="cat-lifestyle">
+                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
+                            <a href="#">Lifestyle</a>
+                            <ul>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">Beauty</a></li>
+                                <li><a href="#">Health</a></li>
+                                <li><a href="#">Parenting</a></li>
+                                <li><a href="#">Home & garden</a></li>
+                            </ul>     
+                        </li>
+                        <li class="cat-showtime">
+                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
+                            <a href="category-2.html">Showtime</a>
+                            <ul>
+                                <li><a href="#">Movies</a></li>
+                                <li><a href="#">Music</a></li>
+                                <li><a href="#">Television</a></li>
+                                <li><a href="#">Gaming</a></li>
+                                <li><a href="#">Lorem ipsum</a></li>
+                                <li><a href="#">Dolor sit amet</a></li>
+                                <li><a href="#">Photo galleries</a></li>
+                            </ul> 
+                        </li>
+                        <li class="cat-tech">
+                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
+                            <a href="#">Tech</a>
+                            <ul>
+                                <li><a href="#">Gadgets</a></li>
+                                <li><a href="#">Mobile</a></li>
+                                <li><a href="#">Internet</a></li>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Technocast</a></li>
+                            </ul> 
+                        </li>
+                        <li class="cat-business">
+                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
+                            <a href="#">Business</a>
+                            <ul>
+                                <li><a href="#">Investments</a></li>
+                                <li><a href="#">Loans & guarantees</a></li>
+                                <li><a href="#">Human resources</a></li>
+                                <li><a href="#">Culture & media</a></li>
+                                <li><a href="#">Market rules</a></li>
+                            </ul>    
+                        </li>
+                        <li class="cat-extra">
+                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
+                            <a href="#">Extra +</a>
+                            <ul>
+                                <li><a href="archive.html">Archive page</a></li>
+                                <li><a href="author.html">Author page</a></li>
+                                <li><a href="contact.html">Contact page</a></li>
+                                <li>
+                                    <a href="#">Blog styles</a>
+                                    <ul>
+                                        <li><a href="category-1.html">Style one</a></li>
+                                        <li><a href="category-2.html">Style two</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Single post styles</a>
+                                    <ul>
+                                        <li><a href="article-1.html">Single post default</a></li>                                                    
+                                        <li><a href="article-2.html">Single post with photos</a></li>
+                                        <li><a href="article-3.html">Single post with review</a></li>
+                                        <li><a href="article-4.html">Single post with audio</a></li>
+                                        <li><a href="article-full-1.html">Full width style one</a></li>
+                                        <li><a href="article-full-2.html">Full width style two</a></li>
+                                        <li><a href="article-cover-1.html">Single post with cover photo</a></li>
+                                        <li><a href="article-cover-2.html">Single post with cover video</a></li>
+                                    </ul>    
+                                </li>
+                                <li>
+                                    <a href="#">Video & photo</a>
+                                    <ul>
+                                        <li><a href="video.html">Video page</a></li>
+                                        <li><a href="video-full.html">Video page - full width</a></li>
+                                        <li><a href="gallery.html">Gallery page</a></li>
+                                        <li><a href="gallery-full.html">Gallery page - full width</a></li>
+                                    </ul>    
+                                </li>                   
+                            </ul>            
+                        </li>
+                    </ul>
+                    
+                </div>
+                <!-- end:sidr -->
+                
+                <!-- start:row -->
+                <div class="row">
+                    
+                    <!-- start:col -->
+                    <div class="col-xs-6">
+                        <!-- start:logo -->
+                        <h1><a href="#"><img src="/static/images/logo-wt-mobile.png" alt="Crazyforus Logo" /></a></h1>
+                        <!-- end:logo -->
+                    </div>
+                    <!-- end:col -->
+                    
+                    <!-- start:col -->
+                    <div class="col-xs-6 text-right">
+                        <a id="nav-expander" href=""><span class="glyphicon glyphicon-th"></span></a>
+                    </div>
+                    <!-- end:col -->
+                    
+                </div>
+                <!-- end:row -->
+                
+            </header>
+            <!-- end:page header mobile -->
+            
+						{% endblock %}
+
+						{% block header_desktop %}
+            <!-- start:page header -->
+            <header id="page-header" class="hidden-xs">
+                
+                <!-- start:header-branding -->
+                <div id="header-branding">
+                
+                    <!-- start:container -->
+                    <div class="container">
+                        
+                        <!-- start:row -->
+                        <div class="row">
+                        
+                            <!-- start:col -->
+                            <div class="col-sm-6 col-md-4">
+                                <!-- start:logo -->
+                                <h1><a href="index.html"><img src="/static/images/logo-wt.png" alt="Crazyforus Logo" /></a></h1>
+                                <!-- end:logo -->
+                            </div>
+                            <!-- end:col -->
+                            
+                            <!-- start:col -->
+                            <div class="col-sm-6 col-md-4 text-center">
+                                
+                                <form id="search-form">
+                                    <input type="text" name="qsearch" placeholder="Search weekly news" />
+                                    <button><span class="glyphicon glyphicon-search"></span></button>
+                                </form>
+                                
+                            </div>
+                            <!-- end:col -->
+                            
+                            <!-- start:col -->
+                            <div class="visible-md visible-lg col-md-4 text-right">
+                                
+                                <div class="weather">
+                                    <i class="icon wi-day-cloudy"></i>
+                                    <h3><span class="glyphicon glyphicon-map-marker"></span> San Diego, California <span class="temp">+82&deg; F</span></h3>
+                                    <span class="date">Thursday, 8.7.2014.</span>
+                                </div>
+                                
+                            </div>
+                            <!-- end:col -->
+                        
+                        </div>
+                        <!-- end:row -->
+    
+                    </div>
+                    <!-- end:container -->
+                    
+                 </div>
+                <!-- end:header-branding -->
+                <!-- start:header-navigation -->
+                <div id="header-navigation">
+                
+                    <!-- start:container -->
+                    <div class="container">
+                        
+                        <!-- start:menu -->
+                        <nav id="menu">
+                            <ul class="nav clearfix">
+                                <li class="home"><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+                                <li class="cat-news">
+                                    <a href="#">Dresses</a>
+                                    <!-- start:submenu-news -->
+                                    <div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <a href="#">Berta Bridal</a>
+																										<div class="subnav-posts">
+																										{% for article in berta_bridal %}
+																											<!-- start:article -->
+																											<article>
+																												<div class="image-wrapper-190">
+																													<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" width="190" alt="" /></a>
+																												</div>
+																													<h3><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h3>
+																											</article>
+																											<!-- end:article -->
+																										{% endfor %}
+																									</div>
+																						</li>
+
+                                            <li>
+                                                <a href="#">Boho Style</a>
+																									<div class="subnav-posts">
+																										{% for article in boho_style %}
+																											<!-- start:article -->
+																											<article>
+																												<div class="image-wrapper-190">
+																													<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" width="190" alt="" /></a>
+																												</div>
+																													<h3><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h3>
+																											</article>
+																											<!-- end:article -->
+																										{% endfor %}
+																									</div>
+																						</li>
+                                            <li>
+                                                <a href="#">Claire Pettibone</a>
+																									<div class="subnav-posts">
+																										{% for article in claire_petibone %}
+																											<!-- start:article -->
+																											<article>
+																												<div class="image-wrapper-190">
+																													<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" width="190" alt="" /></a>
+																												</div>
+																													<h3><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h3>
+																											</article>
+																											<!-- end:article -->
+																										{% endfor %}
+																									</div>
+																							</li>
+																							<!--
+                                            <li>
+                                                <a href="#">Dresses Under $1000</a>
+																									<div class="subnav-posts">
+																										{% for article in dresses_under_1000 %}
+																											<!-- start:article -->
+																											<article>
+																												<div class="image-wrapper-190">
+																													<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" width="190" alt="" /></a>
+																												</div>
+																													<h3><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h3>
+																											</article>
+																											<!-- end:article -->
+																										{% endfor %}
+																									</div>
+																							</li>
+                                            <li>
+                                                <a href="#">Dresses Under $1500</a>
+																									<div class="subnav-posts">
+																										{% for article in dresses_under_1500 %}
+																											<!-- start:article -->
+																											<article>
+																												<div class="image-wrapper-190">
+																													<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" width="190" alt="" /></a>
+																												</div>
+																													<h3><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h3>
+																											</article>
+																											<!-- end:article -->
+																										{% endfor %}
+																									</div>
+																							</li>
+                                            <li>
+                                            <li>
+                                                <a href="#">Reception Dresses</a>
+																									<div class="subnav-posts">
+																										{% for article in reception_dresses %}
+																											<!-- start:article -->
+																											<article>
+																												<div class="image-wrapper-190">
+																													<a href="/articles/{{ article.slug }}"><img src="{{ article.featured_image }}" width="190" alt="" /></a>
+																												</div>
+																													<h3><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h3>
+																											</article>
+																											<!-- end:article -->
+																										{% endfor %}
+																									</div>
+																							</li>
+																							-->
+                                        </ul>                                        
+                                    </div>
+                                    <!-- end:submenu-news -->
+
+                                </li>
+                                <li class="cat-sports">
+                                    <a href="category-1.html">Rings</a>
+                                    <!-- start:submenu-sports -->
+                                    <div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <a href="#">Princess Cut</a>                                            
+                                                                                                <div class="subnav-posts">
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                </div>                                    
+                                            </li>
+                                            <li>
+                                                <a href="#">Diamond Cut</a>
+                                                                                                <div class="subnav-posts">
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                </div>                                    
+                                            </li>
+                                            <li>
+                                                <a href="#">White Gold</a>
+                                                                                                <div class="subnav-posts">
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                </div>                                    
+                                            </li>
+                                            <li>
+                                                <a href="#">18K Gold</a>
+                                                                                                <div class="subnav-posts">
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                </div>                                    
+                                            </li>
+                                            <li>
+                                                <a href="#">Emerald</a>
+                                                                                                <div class="subnav-posts">
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                    <!-- start:article -->
+                                                    <article>
+                                                        <a href="#"><img src="/static/images/dummy/265x160.jpg" width="190" height="140" alt="" /></a>
+                                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                    </article>
+                                                    <!-- end:article -->
+                                                </div>                                    
+                                            </li>
+                                        </ul>
+                                        
+                                    </div>
+                                    <!-- end:submenu-sports -->
+                                </li>
+                                <li class="cat-lifestyle">
+                                    <a href="#">Celebrity</a>
+                                    <!-- start:submenu-lifestyle -->
+                                    <!-- end:submenu-lifestyle -->
+                                </li>
+                                <li class="cat-tech">
+                                    <a href="#">Invitations</a>
+                                    <!-- start:submenu-tech -->
+                                    <div class="dropnav-container">
+                                        <ul class="dropnav-menu">
+                                            <li><a href="#">Save The Date</a></li>
+                                            <li><a href="#">Formal</a></li>
+                                            <li><a href="#">Fun Invitations</a></li>
+                                            <li><a href="#">Custom</a></li>
+                                        </ul>                                        
+                                    </div>
+                                    <!-- end:submenu-tech -->
+                                </li>
+                                <li class="cat-business">
+                                    <a href="#">Contact us</a>
+                                </li>
+
+																<!--
+                                <li class="cat-extra">
+                                    <a href="#">Will Delete</a>
+                                    <div class="dropnav-container">
+                                        <ul class="dropnav-menu">
+                                            <li><a href="archive.html">Archive page</a></li>
+                                            <li><a href="author.html">Author page</a></li>
+                                            <li><a href="contact.html">Contact page</a></li>
+                                            <li>
+                                                <a href="#">Blog styles</a>
+                                                <ul>
+                                                    <li><a href="category-1.html">Style one</a></li>
+                                                    <li><a href="category-2.html">Style two</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Single post styles</a>
+                                                <ul>
+                                                    <li><a href="article-1.html">Single post default</a></li>                                                    
+                                                    <li><a href="article-2.html">Single post with photos</a></li>
+                                                    <li><a href="article-3.html">Single post with review</a></li>
+                                                    <li><a href="article-4.html">Single post with audio</a></li>
+                                                    <li><a href="article-full-1.html">Full width style one</a></li>
+                                                    <li><a href="article-full-2.html">Full width style two</a></li>
+                                                    <li><a href="article-cover-1.html">Single post with cover photo</a></li>
+                                                    <li><a href="article-cover-2.html">Single post with cover video</a></li>
+                                                </ul>    
+                                            </li>
+                                            <li>
+                                                <a href="#">Video & photo</a>
+                                                <ul>
+                                                    <li><a href="video.html">Video page</a></li>
+                                                    <li><a href="video-full.html">Video page - full width</a></li>
+                                                    <li><a href="gallery.html">Gallery page</a></li>
+                                                    <li><a href="gallery-full.html">Gallery page - full width</a></li>
+                                                </ul>    
+                                            </li>     
+                                        </ul>                                           
+                                    </div>
+                                </li>
+																-->
+
+                                <li class="options"><a href="#"><span class="glyphicon glyphicon-asterisk"></span> Sign in</a> | <a href="#"><span class="glyphicon glyphicon-pencil"></span> Register</a></li>
+                            </ul>                            
+                        </nav>
+                        <!-- end:menu -->
+                        
+                    </div>
+                    <!-- end:container -->
+                    
+                </div>
+                <!-- end:header-navigation -->                
+  
+            </header>
+            <!-- end:page header -->
+						{% endblock %}
+
+						{% block main_content %}
+            <!-- start:page slider -->
+            <div id="page-slider" class="clearfix">
+                
+                <!-- start:container -->
+                <div class="container">
+                    
+                        <!-- start:row -->
+                        <div class="row">
+                            
+                            <!-- start:col -->
+                            <div class="col-sm-6">
+                                
+                                <article class="linkbox large cat-sports">
+																	<a href="/articles/{{ post_list.0.slug }}">
+																		<div class="image_wrap_featured" style="overflow: hidden;">
+																			<img src="{{ post_list.0.featured_image }}" width="570" alt="{{ post_list.0.categories }}" class="img-responsive" />
+                                        <div class="overlay">
+																					<h2>{{ post_list.0.title }}</h2>
+																					<p>{{ post_list.0.post_content }}</p>
+                                        </div>
+																			</div>
+                                    </a>
+                                    <a href="#" class="theme">
+																			{{ post_list.0.categories.0|safe }}
+                                    </a>
+                                </article>
+    
+                            </div>
+                            <!-- end:col -->
+                            
+                            <!-- start:col -->
+                            <div class="col-sm-4">
+                                
+                                <article class="linkbox cat-sports">
+																<a href="/articles/{{ post_list.1.slug }}">
+																	<div class="image_wrap" style="overflow: hidden;">
+																			<img src="{{ post_list.1.featured_image }}" width="350" alt="Responsive Image" class="img-responsive" />
+                                        <div class="overlay">
+																						<h3>{{ post_list.1.title }}</h3>
+                                        </div>
+																	</div>
+                                    </a>
+                                    <a href="#" class="theme">
+																				{{ post_list.1.categories.0 }}
+                                    </a>
+                                </article>
+                                
+                                <article class="linkbox cat-sports">
+																	<a href="/articles/{{ post_list.2.slug }}">
+																		<div class="image_wrap" style="overflow: hidden;">
+																			<img src="{{ post_list.2.featured_image }}" width="360" alt="Responsive Image" class="img-responsive" />
+                                        <div class="overlay">
+																						<h3>{{ post_list.2.title }}</h3>
+                                        </div>
+																		</div>
+                                    </a>
+                                    <a href="#" class="theme">
+																				{{ post_list.2.categories.0 }}
+                                    </a>
+                                </article>
+                                
+                                <article class="linkbox cat-sports">
+																	<a href="/articles/{{ post_list.3.slug }}">
+																			<div class="image_wrap" style="overflow: hidden;">
+																			<img src="{{ post_list.3.featured_image }}" width="350" alt="Responsive Image" class="img-responsive" />
+                                        <div class="overlay">
+																						<h3>{{ post_list.3.title }}</h3>
+                                        </div>
+																			</div>
+                                    </a>
+																		<a href="/articles/{{ post_list.3.slug }}" class="theme">
+																				{{ post_list.3.categories.0 }}
+                                    </a>
+                                </article>
+    
+                            </div>
+                            <!-- end:col -->
+														<div class="col-sm-2">
+															<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+															<!-- Ad Next to Main Banner -->
+															<ins class="adsbygoogle"
+																     style="display:inline-block;width:250px;height:452px"
+																		      data-ad-client="ca-pub-1786435203633874"
+																					     data-ad-slot="8248786820"></ins>
+																						 <script>
+																							 (adsbygoogle = window.adsbygoogle || []).push({});
+																						 </script>
+														</div>
+                        </div>
+                        <!-- end:row -->
+                    
+                    <!-- end:slider-nav -->
+                </div>
+                <!-- end:container -->
+                
+            </div>
+            <!-- end:page slider -->    
+            <!-- start:container -->
+            <div class="container">
+                
+                <!-- start:page content -->
+                <div id="page-content" class="clearfix">
+                    
+                    <!-- start:main -->
+                    <div id="main">
+                        
+                        <!-- start:row -->
+                        <div class="row">
+                            
+                            <!-- start:col -->
+                            <div class="col-md-9 separator-right">
+                                
+                                <article class="linkbox large cat-news">
+																<div class="image_wrap">
+																		<a href="/articles/{{ post_list.4.slug }}">
+																				<img src="{{ post_list.4.featured_image }}" width="560" height="390" alt="Responsive Image" class="img-responsive" />
+                                        <div class="overlay">
+																						<h2>{{ post_list.4.title }}</h4>
+                                        </div>
+                                    </a>
+																	</div>
+																		<a href="/articles/{{ post_list.4.slug }}" class="theme">
+																				{{ post_list.4.categories.0 }}
+                                    </a>
+                                </article>
+                                
+                                <!-- start:row -->
+                                <div class="row bottom-margin">
+                                    <!-- start:article.thumb -->
+                                    <article class="thumb cat-sports">
+                                        <!-- start:col -->
+                                        <div class="col-sm-6">
+																					<div class="image-wrapper-265" style="overlay: hidden;">
+																						<a href="/articles/{{ post_list.5.slug }}">
+																								<img src="{{ post_list.5.featured_image }}" width="265" alt="Responsive Image" class="img-responsive" />
+																						</a>
+																							<a href="/articles/{{ post_list.5.slug }}" class="theme">
+																									{{ post_list.5.categories.0 }}
+																							</a>
+																					</div>
+                                        </div>
+                                        <!-- end:col -->
+                                        <!-- start:col -->
+                                        <div class="col-sm-6">
+																					<h3><a href="/articles/{{ post_list.5.slug }}">{{ post_list.5.title }}</a></h3>
+																						<span class="published">{{ post_list.5.post_date }} | 23 <a href="#">comments</a></span>
+																						<span class="text">Article short here...</span>                                                                                    
+                                        </div>
+                                        <!-- end:col -->
+                                    </article>
+                                    <!-- end:article.thumb -->          
+                                
+                                </div>
+                                <!-- end:row -->
+                                
+                                <!-- start:row -->
+                                <div class="row">
+                                    
+                                    <!-- start:col -->
+                                    <div class="col-sm-6">
+                                        <!-- start:article.linkbox -->
+                                        <article class="linkbox cat-sports">
+																					<a href="/articles/{{ post_list.6.slug }}">
+																							<div class="image-wrapper-265">
+																								<img src="{{ post_list.6.featured_image }}" width="265" alt="Responsive Image" class="img-responsive" />
+                                                <div class="overlay">
+																									<h3>{{ post_list.6.post_title }}</h3>
+                                                </div>
+																							</div>
+                                            </a>
+																						<a href="{{ post_list.6.slug }}" class="theme">
+																								{{ post_list.6.categories.0 }}
+                                            </a>
+                                        </article>
+                                        <!-- end:article.linkbox -->
+                                    </div>
+                                    <!-- end:col -->
+                                    <!-- start:col -->
+                                    <div class="col-sm-6">                                    
+                                        <!-- start:article.linkbox -->
+                                        <article class="linkbox cat-sports">
+                                            <a href="#">
+																							<div class="image-wrapper-265">
+																								<img src="{{ post_list.7.featured_image }}" width="265" alt="Responsive Image" class="img-responsive" />
+                                                <div class="overlay">
+																									<h3>{{ post_list.7.title }}</h3>
+                                                </div>
+																							</div>
+                                            </a>
+                                            <a href="#" class="theme">
+																								{{ post_list.7.categories.0 }}
+                                            </a>
+                                        </article>
+                                        <!-- end:article.linkbox -->                              
+                                    </div>
+                                    <!-- end:col -->
+                                </div>
+                                <!-- end:row -->
+                                
+                                <!-- start:row -->
+                                <div class="row">
+                                    <!-- start:col -->
+                                    <div class="col-sm-6">
+                                        <!-- start:article.linkbox -->
+                                        <article class="linkbox cat-sports">
+																					<div class="image-wrapper-265">
+                                            <a href="#">
+																								<img src="{{ post_list.8.featured_image }}" width="265" alt="Responsive Image" class="img-responsive" />
+                                                <div class="overlay">
+																										<h3>{{ post_list.8.title }}</h3>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="theme">
+																								{{ post_list.8.categories.0 }}
+                                            </a>
+																					</div>
+                                        </article>
+                                        <!-- end:article.linkbox -->
+                                    </div>
+                                    <!-- end:col -->
+                                    <!-- start:col -->
+                                    <div class="col-sm-6">                                    
+                                        <!-- start:article.linkbox -->
+                                        <article class="linkbox cat-sports">
+																					<div class="image-wrapper-265">
+                                            <a href="#">
+																								<img src="{{ post_list.9.featured_image }}" width="265" alt="Responsive Image" class="img-responsive" />
+                                                <div class="overlay">
+																										<h3>{{ post_list.9.title }}</h3>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="theme">
+                                                {{ post_list.9.categories.0 }}
+                                            </a>
+																					</div>
+                                        </article>
+                                        <!-- end:article.linkbox -->                              
+                                    </div>
+                                    <!-- end:col -->
+                                </div>
+                                <!-- end:row -->
+                                
+                                <!-- start:row -->
+                                <div class="row">
+                                    <!-- start:col -->
+                                    <div class="col-sm-6">
+                                        <!-- start:article.linkbox -->
+                                        <article class="linkbox cat-sports">
+																					<div class="image-wrapper-265">
+                                            <a href="#">
+																								<img src="{{ post_list.10.featured_image }}" width="265" alt="Responsive Image" class="img-responsive" />
+                                                <div class="overlay">
+																										<h3>{{ post_list.10.title }}</h3>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="theme">
+																								{{ post_list.10.categories.0 }}
+                                            </a>
+																					</div>
+                                        </article>
+                                        <!-- end:article.linkbox -->
+                                    </div>
+                                    <!-- end:col -->
+                                    <!-- start:col -->
+                                    <div class="col-sm-6">                                    
+                                        <!-- start:article.linkbox -->
+                                        <article class="linkbox cat-sports">
+																					<div class="image-wrapper-265">
+                                            <a href="#">
+																								<img src="{{ post_list.11.featured_image }}" width="265" alt="Responsive Image" class="img-responsive" />
+                                                <div class="overlay">
+																										<h3>{{ post_list.11.title }}</h3>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="theme">
+																								{{ post_list.11.categories.0 }}
+                                            </a>
+																					</div>
+                                        </article>
+                                        <!-- end:article.linkbox -->                              
+                                    </div>
+                                    <!-- end:col -->
+                                </div>
+                                <!-- end:row -->
+                                
+                                
+                                                                <!-- start:business-news -->
+                                <section class="section-full cat-business-light news-layout news-lay-1 relative">
+                                    
+                                    <a href="#" class="theme cat-business">
+                                        Business
+                                    </a>
+                                    
+                                    <!-- start:row -->
+                                    <div class="row">
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4">
+                                            <!-- start:article.linkbox -->
+                                            <article>                                        
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>
+                                                <span class="published">March 18, 2014</span>
+                                                <span class="text">Aliquam sollicitudin, enim sit amet hendrerit consequat, velit orci posuere elit, eu facilisis lacus odio ac nunc.</span>                                                                                    
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                            
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4">
+                                            <!-- start:article.linkbox -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="published">February 18, 2014</span>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                            
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4">
+                                            <!-- start:article.linkbox -->
+                                            <article>                                        
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>
+                                                <span class="published">March 18, 2014</span>
+                                                <span class="text">Aliquam sollicitudin, enim sit amet hendrerit consequat, velit orci posuere elit, eu facilisis lacus odio ac nunc.</span>                                                                                    
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                            
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        
+                                    </div>
+                                    <!-- end:row -->
+                                </section>
+                                <!-- end:business-news -->                                
+                                                                <!-- start:videos -->
+                                <section class="section-full cat-videos no-padding">
+                                    
+                                    <!-- start:row -->
+                                    <div class="row">
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-sm-8">
+                                            
+                                            <article class="linkbox cat-showtime">
+																							<div class="image-wrapper-301">
+                                                <a href="#">
+																										<img src="{{ post_list.12.featured_image }}" width="334" alt="Responsive image" class="img-responsive" />
+                                                    <div class="overlay">
+																												<h2>{{ post_list.12.title }}</h2>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="theme">
+																										{{ post_list.12.categories.0 }}
+                                                </a>
+																							</div>
+                                            </article>
+                
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-sm-4">
+                                            
+                                            <article class="linkbox cat-showtime">
+																							<div class="image-wrapper-274">
+                                                <a href="#">
+																										<img src="{{ post_list.13.featured_image }}" width="274" alt="Responsive image" class="img-responsive" />
+                                                    <div class="overlay">
+																												<h3>{{ post_list.13.title }}</h3>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="theme">
+																										{{ post_list.13.categories.0 }}
+                                                </a>
+																							</div>
+                                            </article>
+                                            
+                                            <article class="linkbox cat-showtime">
+																							<div class="image-wrapper-274">
+                                                <a href="#">
+																										<img src="{{ post_list.14.featured_image }}" width="274" alt="Responsive image" class="img-responsive" />
+                                                    <div class="overlay">
+																												<h3>{{ post_list.14.title }}</h3>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="theme">
+																										{{ post_list.14.categories.0 }}
+                                                </a>
+																							</div>
+                                            </article>
+                
+                                        </div>
+                                        <!-- end:col -->
+                
+                                    </div>
+                                    <!-- end:row -->
+                                    
+                                </section>
+                                <!-- end:videos -->                                
+                                                                <!-- start:reviews -->
+                                <section class="section-full top-padding cat-reviews news-layout news-lay-2">
+                                    
+                                    <header>
+                                        <h2>Check out our latest reviews</h2>
+                                        <span class="borderline"></span>
+                                    </header>
+                                    
+                                    <!-- start:row -->
+                                    <div class="row">
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-6 col-sm-3">
+                                            <!-- start:article.linkbox -->
+                                            <article class="review">
+                                                <a href="#">
+																								<div class="image-wrapper-120">
+																										<img src="{{ post_list.15.featured_image }}" width="120" alt="Responsive image" class="img-responsive" />
+																								</div>
+																										<h3>{{ post_list.15.title }}</h3>      
+                                                </a>
+                                                <div class="review-rating">
+                                                    <ul class="rating">
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-6 col-sm-3">
+                                            <!-- start:article.linkbox -->
+                                            <article class="review">
+                                                <a href="#">
+																								<div class="image-wrapper-120">
+																										<img src="{{ post_list.16.featured_image }}" width="120" alt="Responsive image" class="img-responsive" />
+																								</div>
+																										<h3>{{ post_list.16.title }}</h3>      
+                                                </a>
+                                                <div class="review-rating">
+                                                    <ul class="rating">
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                    </ul>
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-6 col-sm-3">
+                                            <!-- start:article.linkbox -->
+                                            <article class="review">
+                                                <a href="#">
+																								<div class="image-wrapper-120">
+																										<img src="{{ post_list.17.featured_image }}" width="120" alt="Responsive image" class="img-responsive" />
+																								</div>
+																										<h3>{{ post_list.17.title }}</h3>      
+                                                </a>
+                                                <div class="review-rating">
+                                                    <ul class="rating">
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-6 col-sm-3">
+                                            <!-- start:article.linkbox -->
+                                            <article class="review">
+                                                <a href="#">
+																								<div class="image-wrapper-120">
+																										<img src="{{ post_list.18.featured_image }}" width="120" alt="Responsive image" class="img-responsive" />
+																								</div>
+																										<h3>{{ post_list.18.title }}</h3>      
+                                                </a>
+                                                <div class="review-rating">
+                                                    <ul class="rating">
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li class="li-rated"></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        
+                                        
+                                    </div>
+                                    <!-- end:row -->
+                                </section>
+                                <!-- end:reviews -->        
+                                <!-- start:row -->
+                                <div class="row top-margin">
+                                    <!-- start:col -->
+                                    <div class="col-sm-6">
+                                        
+                                        <!-- start:showtime -->
+                                        <section class="section-lifestyle news-layout">
+                                            
+                                            <header>
+                                                <h2><a href="#">DIY</a></h2>
+                                                <span class="borderline"></span>
+                                            </header>
+                                        
+                                            <!-- start:article -->
+                                            <article class="clearfix">
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
+                                                <a href="#"><img src="/static/images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                            <!-- start:article -->
+                                            <article class="clearfix">
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
+                                                <a href="#"><img src="/static/images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                            <!-- start:article -->
+                                            <article class="clearfix">
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
+                                                <a href="#"><img src="/static/images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                            <!-- start:article -->
+                                            <article class="clearfix">
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
+                                                <a href="#"><img src="/static/images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                        </section>
+                                        <!-- end:showtime -->
+                                            
+                                    </div>
+                                    <!-- end:col -->
+                                    <!-- start:col -->
+                                    <div class="col-sm-6">                                    
+                                        
+                                        <!-- start:showtime -->
+                                        <section class="section-tech news-layout">
+                                            
+                                            <header>
+                                                <h2><a href="#">Dresses</a></h2>
+                                                <span class="borderline"></span>
+                                            </header>
+                                        
+                                            <!-- start:article -->
+                                            <article class="clearfix">
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
+                                                <a href="#"><img src="/static/images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                            <!-- start:article -->
+                                            <article class="clearfix">
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
+                                                <a href="#"><img src="/static/images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                            <!-- start:article -->
+                                            <article class="clearfix">
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
+                                                <a href="#"><img src="/static/images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                            <!-- start:article -->
+                                            <article class="clearfix">
+                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
+                                                <a href="#"><img src="/static/images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                            
+                                        </section>
+                                        <!-- end:showtime -->
+                                        
+                                    </div>
+                                    <!-- end:col -->
+                                </div>
+                                <!-- end:row --> 
+                                
+                                
+                            </div>
+                            <!-- end:col -->
+                            
+                            <!-- start:col -->
+                            <div class="col-md-3">
+                                
+                                                                <!-- start:latest-news -->
+                                <section class="section-news news-layout">
+                                    <!-- start:header -->
+                                    <header>
+                                        <h2><a href="#">Latest news</a></h2>
+                                        <span class="borderline"></span>
+                                    </header>
+                                    <!-- end:header -->
+                                    
+                                    <!-- start:row -->
+                                    <div class="row">
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                    </div>
+                                    <!-- end:row -->
+                                </section>
+                                <!-- end:latest-news -->                                
+                                <div class="ad">
+																	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+																	<!-- New Home Page #1 -->
+																	<ins class="adsbygoogle"
+																		     style="display:inline-block;width:160px;height:600px"
+																				      data-ad-client="ca-pub-1786435203633874"
+																							     data-ad-slot="2928480024"></ins>
+																								 <script>
+																									 (adsbygoogle = window.adsbygoogle || []).push({});
+																								 </script>
+                                </div>
+                                
+                                                                <!-- start:latest-news -->
+                                <section class="news-layout">
+                                    <!-- start:header -->
+                                    <header>
+                                        <h2>Latest comments</h2>
+                                        <span class="borderline"></span>
+                                    </header>
+                                    <!-- end:header -->
+                                    
+                                    <!-- start:row -->
+                                    <div class="row">
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+                                        <!-- start:col -->
+                                        <div class="col-xs-4 col-sm-12">
+                                            <!-- start:article -->
+                                            <article>                                        
+                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
+                                                <span class="published">February 18, 2014</span>
+                                            </article>
+                                            <!-- end:article -->
+                                        </div>
+                                        <!-- end:col -->
+                                        
+
+                                    </div>
+                                    <!-- end:row -->
+                                </section>
+                                <!-- end:latest-news -->                                
+                                                                <!-- start:latest-news -->
+                                <section class="news-layout">
+                                    <!-- start:header -->
+                                    <header>
+                                        <h2>Crazyforus Stuff</h2>
+                                        <span class="borderline"></span>
+                                    </header>
+                                    <!-- end:header -->
+
+                                    <article class="review">
+                                        <a href="#">
+                                            <img src="/static/images/dummy/170x150.jpg" width="170" height="150" alt="Responsive image" class="img-responsive" />
+                                            <h3>Aliquam sollicitudin enim sit hendrerit</h3>      
+                                        </a>
+                                        <div class="review-rating">
+                                            <ul class="rating">
+                                                <li class="li-rated"></li>
+                                                <li class="li-rated"></li>
+                                                <li class="li-rated"></li>
+                                                <li class="li-rated"></li>
+                                                <li class="li-rated"></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                    <!-- end:article -->
+                                        
+                                </section>
+                                <!-- end:latest-news -->                                                                
+                            </div>
+                            <!-- end:col -->
+                            
+                        </div>
+                        <!-- end:row -->
+        
+                        
+                    </div>
+                    <!-- end:main -->
+                    
+                                        <!-- start:sidebar -->
+                    <div id="sidebar">
+                        
+                        <!-- start:advertising -->
+                        <div class="ad">
+													<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+													<!-- New Home Page #3 -->
+													<ins class="adsbygoogle"
+														     style="display:inline-block;width:300px;height:250px"
+																      data-ad-client="ca-pub-1786435203633874"
+																			     data-ad-slot="7358679629"></ins>
+																				 <script>
+																					 (adsbygoogle = window.adsbygoogle || []).push({});
+																				 </script>
+                        </div>
+                        <!-- end:advertising -->
+                        
+                        <!-- start:section-module-timeline -->
+                        <section class="module-timeline">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Wedding Planning Timeline</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:articles -->
+                            <div class="articles">
+                                <article>
+                                    <span class="published">Today</span>
+                                    <span class="published-time">15:00</span>
+                                    <div class="cnt">
+                                        <i class="bullet bullet-sports"></i>
+                                        <span class="category cat-sports"><a href="#">Sport</a></span>
+                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                                    </div>                                
+                                </article>
+                                
+                                <article>
+                                    <span class="published">Yesterday</span>
+                                    <span class="published-time">15:00</span>
+                                    <div class="cnt">
+                                        <i class="bullet bullet-showtime"></i>
+                                        <span class="category cat-showtime"><a href="#">Showtime</a></span>
+                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                                    </div>                                
+                                </article>
+                                
+                                <article>
+                                    <span class="published">Feb 18th</span>
+                                    <span class="published-time">15:00</span>
+                                    <div class="cnt">
+                                        <i class="bullet bullet-lifestyle"></i>
+                                        <span class="category cat-lifestyle"><a href="#">Lifestyle</a></span>
+                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                                    </div>                                
+                                </article>
+                                
+                                <article>
+                                    <span class="published">Feb 15th</span>
+                                    <span class="published-time">15:00</span>
+                                    <div class="cnt">
+                                        <i class="bullet bullet-business"></i>
+                                        <span class="category cat-business"><a href="#">Business</a></span>
+                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                                    </div>                                
+                                </article>
+                                
+                                <article>
+                                    <span class="published">Feb 10th</span>
+                                    <span class="published-time">15:00</span>
+                                    <div class="cnt">
+                                        <i class="bullet bullet-tech"></i>
+                                        <span class="category cat-tech"><a href="#">Tech</a></span>
+                                        <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                                    </div>                                
+                                </article>
+                            </div>
+                            <!-- end:articles -->
+                            
+                        </section>
+                        <!-- end:section-module-timeline -->
+                        
+                        <!-- start:section-module-quote -->
+                        <section class="module-quote">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Weekly quote</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:blockquote-quote -->
+                            <blockquote>
+                                <p>Resentment and complaint are appropriate neither for oneself nor others.</p>
+                                <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                            <!-- end:blockquote-quote -->
+                        </section>
+                        <!-- end:section-module-quote -->
+                        
+                        <!-- start:section-module-singles -->
+                        <section class="module-singles">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Top singles</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:singles-container -->
+                            <ul class="singles-container">
+                                <li>
+                                    <span class="glyphicon glyphicon-play-circle"></span>
+                                    <a href="">Meet Me Halfway</a>
+                                    <span class="author">Black Eyed Peas</span>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-play-circle"></span>
+                                    <a href="">Empire State Of Mind (Live)</a>
+                                    <span class="author">Jay Z</span>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-play-circle"></span>
+                                    <a href="">Need You Know</a>
+                                    <span class="author">Lady Antebellum</span>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-play-circle"></span>
+                                    <a href="">Already Gone</a>
+                                    <span class="author">Kelly Clarkson</span>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-play-circle"></span>
+                                    <a href="">Party In The U.S.A.</a>
+                                    <span class="author">Miley Cyrus</span>
+                                </li>
+                            </ul>
+                            <!-- end:singles-container -->
+                        </section>
+                        <!-- end:section-module-singles -->
+                        
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Don't miss this stories</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            
+                            <!-- start:article-container -->
+                            <div class="article-container">
+                                <!-- start:article -->
+                                <article class="clearfix">
+                                    <a href="#"><img src="/static/images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
+                                    <span class="published">Feb 18, 2014 <span class="category cat-sports"><a href="#">Sports</a></span></span>
+                                    <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                                </article>
+                                <!-- end:article -->
+                                <!-- start:article -->
+                                <article class="clearfix">
+                                    <a href="#"><img src="/static/images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
+                                    <span class="published">Feb 18, 2014 <span class="category cat-news"><a href="#">News</a></span></span>
+                                    <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                                </article>
+                                <!-- end:article -->
+                                <!-- start:article -->
+                                <article class="clearfix">
+                                    <a href="#"><img src="/static/images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
+                                    <span class="published">Feb 18, 2014 <span class="category cat-lifestyle"><a href="#">Lifestyle</a></span></span>
+                                    <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                                </article>
+                                <!-- end:article -->
+                                <!-- start:article -->
+                                <article class="clearfix">
+                                    <a href="#"><img src="/static/images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
+                                    <span class="published">Feb 18, 2014 <span class="category cat-showtime"><a href="#">Showtime</a></span></span>
+                                    <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                                </article>
+                                <!-- end:article -->
+                            </div>
+                            <!-- end:article-container -->
+                        </section>
+                        <!-- end:section-module-news -->
+                        
+                        <!-- start:advertising -->
+                        <div class="ad ad-separator">
+                            <a href=""><img src="/static/images/dummy/banner_300x250.png" width="300" height="250" alt=""></a>
+                        </div>
+                        <!-- end:advertising -->
+                        
+                        <!-- start:section-module-photos -->
+                        <section class="module-photos">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Weekly photos</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            <!-- start:article-container -->
+                            <div id="weekly-gallery" class="article-container">
+                                <!-- start:row -->
+                                <div class="row">
+                                    <!-- start:article -->
+                                    <article class="clearfix">
+                                        <p>Aliquam sollicitudin, enim sit amet hendrerit consequat, velit orci posuere elit, eu facilisis lacus odio ac nunc. </p>
+                                        <a href="/static/images/dummy/photo-big.jpg">
+                                            <img src="/static/images/dummy/300x200.jpg" width="300" height="200" alt="Responsive image" class="img-responsive" />
+                                        </a>
+                                    </article>
+                                    <!-- end:article -->
+                                </div>
+                                <!-- end:row -->
+                                
+                                <!-- start:row -->
+                                <div class="row">
+                                    <!-- start:col -->
+                                    <div class="col-xs-4">
+                                        <!-- start:article -->
+                                        <article class="clearfix">
+                                            <a href="/static/images/dummy/photo-big.jpg"><img src="/static/images/dummy/100x80_2.jpg" width="100" height="80" alt="Responsive image" class="img-responsive" /></a>
+                                        </article>
+                                        <!-- end:article -->
+                                    </div>
+                                    <!-- end:col -->
+                                    <!-- start:col -->
+                                    <div class="col-xs-4">
+                                        <!-- start:article -->
+                                        <article class="clearfix">
+                                            <a href="/static/images/dummy/photo-big.jpg"><img src="/static/images/dummy/100x80_2.jpg" width="100" height="80" alt="Responsive image" class="img-responsive" /></a>
+                                        </article>
+                                        <!-- end:article -->
+                                    </div>
+                                    <!-- end:col -->
+                                    <!-- start:col -->
+                                    <div class="col-xs-4">
+                                        <!-- start:article -->
+                                        <article class="clearfix">
+                                            <a href="/static/images/dummy/photo-big.jpg"><img src="/static/images/dummy/100x80_2.jpg" width="100" height="80" alt="Responsive image" class="img-responsive" /></a>
+                                        </article>
+                                        <!-- end:article -->
+                                    </div>
+                                    <!-- end:col -->
+                                </div>
+                                <!-- end:row -->
+                            </div>
+                            <!-- end:article-container -->
+                        </section>
+                        <!-- end:section-module-photos -->
+
+                        
+                    </div>
+                    <!-- end:sidebar -->                    
+                </div>
+                <!-- end:page content -->
+            
+            </div>
+            <!-- end:container -->
+    
+						{% endblock %}
+
+						{% block footer %}
+            <!-- footer:page footer -->
+            <footer id="page-footer">
+                
+                <!-- start:container -->
+                <div class="container">
+                
+                    <nav id="foot-menu" class="hidden-xs">
+                        <ul class="clearfix">
+                            <li class="home current"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+                            <li class="cat-news"><a href="#">Dresses</a></li>
+                            <li class="cat-sports"><a href="#">Rings</a></li>
+                            <li class="cat-lifestyle"><a href="#">Celebrity</a></li>
+                            <li class="cat-showtime"><a href="#">Invitations</a></li>
+                            <li class="cat-tech"><a href="#">Contact Us</a></li>
+                            <li class="options"><a href="#" class="scrollToTop">Back to top <span class="glyphicon glyphicon-chevron-up"></span></a></li>
+                        </ul>                            
+                    </nav>
+                    
+                    <!-- start:row -->
+                    <div class="about row">
+                    
+                        <!-- start:col -->
+                        <div class="col-sm-12 col-md-3">
+                            <h3><a href="/"><img src="/static/images/logo.png" alt="Logo Crazyforus" /></a></h3>
+                        </div>
+                        <!-- end:col -->
+                        
+                        <!-- start:col -->
+                        <div class="col-sm-6 col-md-5">
+                            <h4>About Crazyforus</h4>
+														<p>Our mission is to stay abreast of new ideas and trends in wedding planning and to aggregate the best articles on wedding planning trends and ideas from around the web.
+
+														<br /><br />
+														We also maintain an online invitations store that features a complete line of the best invitations, save the date cards and other wedding stationery.</p>
+                            <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-linkedin-square fa-lg"></i></a>
+														<!--
+                            <a href="#"><i class="fa fa-google-plus-square fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-vimeo-square fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
+														-->
+                        </div>
+                        <!-- end:col -->
+                        
+                        <!-- start:col -->
+                        <div class="col-sm-6 col-md-4">
+                            <h4>Additional information</h4>
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Legal agreement</a></li>
+                                <li><a href="#">Our staff</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+																<!--
+                                <li><a href="#">Become a member</a></li>
+                                <li><a href="#">Press Releases</a></li>
+																-->
+                            </ul>
+                        </div>
+                        <!-- end:col -->
+
+                    </div>
+                    <!-- end:row -->
+                    
+                    <!-- start:row -->
+                    <div class="copyright row">
+                    
+                        <!-- start:col -->
+                        <div class="col-sm-6">
+                            &copy; <a href="#">Crazyforus.com</a> 2014. All rights reserved.
+                        </div>
+                        <!-- end:col -->
+                        
+                        <!-- start:col -->
+                        <div class="col-sm-6 text-right">
+                            Wedding Themes <a href="http://www.kharron.com">Crazyforus.com</a>.
+                        </div>
+                        <!-- end:col -->
+
+                    </div>
+                    <!-- end:row -->
+                
+                </div>
+                <!-- end:container -->
+        
+            </footer>
+            <!-- end:page footer -->
+						{% endblock %}
+        
+        </div>
+        <!-- end:page inner wrap -->
+    </div>
+    <!-- end:page outer wrap -->
+    
+		{% block javascripts %}
+    
+    <!-- start:scripts -->
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/bootstrap-datepicker.js"></script>
+		<script type="text/javascript">
+       $(window).bind('scroll', function() {
+				 var navHeight = $( window ).height() - 70;
+				 if ($(window).scrollTop() > navHeight) {
+						 $('nav').addClass('fixed');
+				   } else {
+						 $('nav').removeClass('fixed');
+				  }
+				});
+		</script>
+    <script src="/static/assets/js/jquery.sidr.min.js"></script>
+    <script src="/static/assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="/static/assets/js/jquery.touchSwipe.min.js"></script>
+    <script src="/static/assets/js/jquery.photobox.js"></script>
+    <script src="/static/assets/js/functions.js"></script>
+    <!-- end:scripts -->
+		{% endblock %}
+    
+</body>
+</html>

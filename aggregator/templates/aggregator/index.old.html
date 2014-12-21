@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Crazyforus, free Wedding Web Sites | Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Le styles -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="ico/favicon.png">
+  </head>
+
+  <body>
+    <div class="container">
+				<div class="row">
+						<div class="span12" style="backround-color:#eee;">
+								<h1 style="margin-top:0px;">Crazyforus</h1>
+						</div>	
+				</div>
+
+		<!-- Main / Latest Articles -->
+      <div class="row">
+        <div class="span7">
+				{% if news_dict.0 %}
+						<div class="thumbnail image-primary" style="float:left;">
+								<a href="{% url 'show_article' news_dict.0.news_info.id %}"><img src="{{ news_dict.0.images.0.image_link}}/{{ news_dict.0.images.0.image_name }}" /></a>
+						</div>
+						  <h2>{{ news_dict.0.news_info.title }}</h2>
+							<p>{{ news_dict.0.news_info.article_text|safe }}</p>
+							<p><a class="btn btn-primary" href="#">Read More &raquo;</a></p>
+				{% endif %}
+        </div>
+        <div class="span5">
+				{% if news_dict.1 %}
+						<div class="thumbnail image-secondary" style="float:left;">
+								<a href="{% url 'show_article' news_dict.1.news_info.id %}"><img src="{{ news_dict.1.images.0.image_link}}/{{ news_dict.1.images.0.image_name }}" /></a>
+						</div>
+          <h4><a href="{% url 'show_article' news_dict.1.news_info.id %}">{{ news_dict.1.news_info.title }}</a></h4>
+          <p>{{ news_dict.1.news_info.article_text|safe }}</p>
+          <p><a class="btn" href="#">View favors &raquo;</a></p>
+				{% endif %}
+       </div>
+		  </div>
+      <div class="row">
+        <div class="span7">
+				{% if news_dict.2 %}
+						<div class="thumbnail image-primary" style="float:left;">
+								<a href="{% url 'show_article' news_dict.2.news_info.id %}"><img src="{{ news_dict.2.images.0.image_link}}/{{ news_dict.2.images.0.image_name }}" /></a>
+						</div>
+          <h2>{{ news_dict.2.news_info.title }}</h2>
+          <p>{{ news_dict.2.news_info.article_text|safe }}</p>
+          <p><a class="btn" href="#">See Posts! &raquo;</a></p>
+				{% endif %}
+        </div>
+        <div class="span5">
+				{% if news_dict.3 %}
+          <h3><a href="{% url 'show_article' news_dict.1.news_info.id %}">{{ news_dict.3.news_info.title }}</a></h3>
+          <p>{{ news_dict.3.news_info.artitle_text }}</h3>
+          <p><a class="btn" href="#">Read More &raquo;</a></p>
+				{% endif %}
+       </div>
+			</div>
+		<div class="row">
+				<div style="height:20px;margin-top:10px;margin-bottom:10px;background-color:#000;" class="span12">
+					<div class="navbar navbar-inverse">
+							<div class="navbar-inner">
+								<a class="brand" href="http://aggregator.crazyforus.com">Aggregator</a>
+								<ul class="nav">
+									<li class="active"><a href="#">Home</a></li>
+										<li class="divider-vertical"></li>
+									<li><a href="#">Link</a></li>
+										<li class="divider-vertical"></li>
+									<li><a href="#">Link</a></li>
+								</ul>
+							</div>
+						</div>	
+				</div>
+		</div>
+		<div style="height:50px;"></div>
+      <div class="row" class="margin-top:40px;">
+        <div class="span4">
+				{% if news_dict.4 %}
+						<div class="thumbnail" style="background-color:#eee">
+								<a href="{% url 'show_article' news_dict.4.news_info.id %}"><img src="{{ news_dict.4.images.0.image_link }}/{{ news_dict.4.images.0.image_name }}" data-src="holder.js/300x200" /></a>
+								<h3>{{ news_dict.4.news_info.title }}</h3>
+						</div>
+          <p>{{ news_dict.4.news_info.article_text|safe }}</p>
+          <p><a class="btn" href="#">See Posts! &raquo;</a></p>
+				{% endif %}
+        </div>
+        <div class="span4">
+				{% if news_dict.5 %}
+				  <div class="thumbnail" style="background-color:#eee">
+								<a href="{% url 'show_article' news_dict.5.news_info.id %}"><img src="{{ news_dict.5.images.0.image_link }}/{{ news_dict.5.images.0.image_name }}" data=src="holder.js/300x200" /></a>
+								<h3>{{ news_dict.5.news_info.title }}</h3>
+				  </div>
+          <p>{{ news_dict.5.news_info.article_text|safe }}</p>
+          <p><a class="btn" href="#">View favors &raquo;</a></p>
+				{% endif %}
+				</div>
+				<div class="span4">
+				{% if news_dict.6 %}
+				  <div class="thumbnail" style="background-color:#eee">
+								<a href="{% url 'show_article' news_dict.6.news_info.id %}"><img src="{{ news_dict.6.images.0.image_link }}/{{ news_dict.6.images.0.image_name }}" data=src="holder.js/300x200" /></a>
+								<h3>{{ news_dict.6.news_info.title }}</h3>
+				  </div>
+          <p>{{ news_dict.6.news_info.article_text|safe }}</p>
+          <p><a class="btn" href="#">View favors &raquo;</a></p>
+				{% endif %}
+       </div>
+			</div>
+		 <!-- /container -->
+		<div class="container">
+				<div class="row" style="height:30px;">
+					<hr>
+					<footer>
+						<p>&copy; 2013 eWedding Solutions</p>
+					</footer>
+				</div>
+		</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+
+  </body>
+</html>

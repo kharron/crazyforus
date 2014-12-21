@@ -1,0 +1,53 @@
+
+.image-primary {
+		max-width: 300px;
+		max-height: 200px;
+		overflow: hidden;
+		margin:6px;
+}
+
+.image-secondary {
+		max-width: 200px;
+		max-height: 200px;
+		overflow: hidden;
+		margin:6px;
+}
+
+.display-article-image {
+		max-width: 250px;
+		overflow: hidden;
+		margin-left: 10px;
+		margin-top: 10px;
+		float: left;
+}
+
+.article-image {
+		max-width: 400px;
+		max-height: 400px;
+		overflow: hidden;
+		margin:6px;
+}
+
+.article-title {
+		width: 100%;
+		height: 20px;
+	}
+
+
+/* ==================   Admin ======================== */
+
+
+
+
+.checkbox-label {
+	float:left;
+	margin-left: 10px;
+}
+
+.admin-checkbox {
+	margin-left: 10px;
+}
+
+
+
+/* ================== End Admin ====================== */

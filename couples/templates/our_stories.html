@@ -1,0 +1,14 @@
+{% extends 'administrative_base.html' %}
+
+{% block main-container %}
+		<form action="{% url 'update_stories' %}" method="POST">
+				{% csrf_token %}
+				<textarea name="story_2" cols="300" style="width:500px;" rows="10">{{ female_story }}</textarea>	
+				<div class="alert alert-info" style="float:right;height:100px;">
+						Write the story of how you met...from your perspective
+				</div>
+				<br /><br />
+				<textarea name="story_1" cols="300" style="width:500px;" rows="10">{{ male_story }}</textarea>	
+		<input class="btn btn-primary" style="width:100px;height:50px;font-size:20px;" type="Submit" value="Save">
+		</form>
+{% endblock main-container %}

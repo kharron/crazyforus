@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Crazyforus.com | Edit Article Images</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/css/jquery.Jcrop.min.css" />
+	</head>
+	<body>
+		{{ image_size_list }}
+		<br />
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row">
+						<div class="col-lg-6">
+							<h3>Crop the Image</h3>
+							<!-- TODO check image sizes to ensure they are big enough -->
+							<!-- TODO Make this mobile compliant -->
+							<p>This is the image at full size. Select as much of the image as you can.  The crop will create 11 images all of different sizes.  This will allow each post to fit with images into any post type on any page</p>
+						</div>
+						<div class="col-lg-6">
+							<button style="margin: 20px auto;" id="cropBtn" type="button" name="submit_crop" class="btn btn-primary" />Crop Image</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- End Row of header -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div id="image_to_crop" style="float: left;"><img id="target" src="{{ article_images.0.image_link }}/{{ article_images.0.image_name }}" /></div>
+					<div style="margin-left:10px;float: left;">
+						<input type="hidden" name="image_url" id="image_url" value="{{ article_images.0.image_link }}/{{ article_images.0.image_name }}" />
+						<input type="hidden" id="x1" name="x1" />
+						<input type="hidden" id="x2" name="x2" />
+						<input type="hidden" id="y1" name="y1" />
+						<input type="hidden" id="y2" name="y2" />
+						<input type="hidden" id="w" name="w" />
+						<input type="hidden" id="h" name="h" />
+					</div>
+				</div>
+			</div> <!-- End Row of Hidden elements -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row">
+						<div class="col-lg-6">
+							<h3>Crop the Image</h3>
+							<p>This is the image at full size.  Select as much of the image as you can.  The crop will create 11 images all of different sizes.  This will allow each post to fit with images into any post type on any page</p>
+						</div>
+						<div class="col-lg-6">
+							<button style="margin: 20px auto;" id="cropBtn" type="button" name="submit_crop" class="btn btn-primary" />Crop Image</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- End Row of footer -->
+		</div>
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.Jcrop.min.js"></script>
+		<script>
+
+			// GLobals
+				var jcrop_api;
+				xsize = 819;
+				ysize = 470;
+
+				// Create two arrays one with image names and the other with image sizes
+				var img_list = "{{ img_list }}"; // list of images to crop
+				var img_size_list = "{{ image_size_list }}"; // list of size of images to crop
+				img_size_list = img_size_list.substring(0, img_size_list.length-1);
+				img_list = img_list.substring(0, img_list.length - 1);
+				img_size_list = img_size_list.split(","); // This is the size array
+				img_list = img_list.split(","); // This is the image array
+				var img_count = img_list.length;
+				var curr_index = 0;
+
+				// Set image size to start
+				img_width = get_size("x", img_size_list[0]);
+				img_height = get_size("y", img_size_list[0]);
+				if (img_height >= img_width){
+					$("#target").css("width", "819px");
+				} else {
+					$("#target").css("height", "470px");
+				}
+
+			function get_size(dimension, x_y){
+				xy_arr = x_y.split("_");
+				if (dimension=="x"){
+					return xy_arr[0];
+				} else {
+					return xy_arr[1];
+				}
+			}
+
+			$(document).ready(function(){
+
+				$("#cropBtn").click(function(){
+					curr_width = $("#target").width();
+					curr_height = $("#target").height();
+					orig_width = get_size("x", img_size_list[curr_index]);
+					orig_height = get_size("y", img_size_list[curr_index]);
+					multiplier = orig_width/curr_width;
+					multiplier2 = orig_height/curr_height;
+					var image_url = $("#image_url").val();		
+					var x1 = $("#x1").val()*multiplier;
+					var x2 = $("#x2").val()*multiplier;
+					var y1 = $("#y1").val()*multiplier;
+					var y2 = $("#y2").val()*multiplier;
+					var w = $("#w").val()*multiplier;
+					var y = $("#h").val()*multiplier;
+					$.ajax({
+						type: "POST",
+						url: "/aggregator/edit_article_images/",
+						data: "x1=" + x1 +"&image_url=" + image_url + "&x2=" + x2 + "&y1=" + y1 + "&y2=" + y2 + "&w=" + w + "&y=" + y,
+						success: function(msg) {
+							load_next_image();
+						}
+						});
+					});
+
+				$('#target').Jcrop({
+					onChange:   showCoords,
+					onSelect:   showCoords,
+					onRelease:  clearCoords,
+					aspectRatio: xsize / ysize
+				},function(){
+					jcrop_api = this;
+				});
+			});
+
+
+				function load_next_image(){
+					// img_list is a Global var that contains all of the images
+					curr_index++;
+					if (curr_index < img_count){
+						$("#image_to_crop").replaceWith('<div id="image_to_crop" style="float: left;"><img id="target" src="' + img_list[curr_index] + '" /></div>'); 
+						$("#image_url").val(img_list[curr_index]);
+						// Set image size to start
+						img_width = get_size("x", img_size_list[curr_index]);
+						img_height = get_size("y", img_size_list[curr_index]);
+						/*
+						if (img_height >= img_width){
+							$("#target").css("width", "819px");
+						} else {
+							$("#target").css("height", "470px");
+						}
+						*/
+
+						$('#target').Jcrop({
+							onChange:   showCoords,
+							onSelect:   showCoords,
+							onRelease:  clearCoords,
+							aspectRatio: xsize / ysize
+						},function(){
+							jcrop_api = this;
+						});
+					} else {
+						location.href = '/aggregator/admin';
+					}
+					
+
+				}
+				function showCoords(c)
+				{
+					$('#x1').val(c.x);
+					$('#y1').val(c.y);
+					$('#x2').val(c.x2);
+					$('#y2').val(c.y2);
+					$('#w').val(c.w);
+					$('#h').val(c.h);
+				};
+
+				function clearCoords()
+				{
+					$('#coords input').val('');
+				};
+
+		</script>
+	</body>
+</html>

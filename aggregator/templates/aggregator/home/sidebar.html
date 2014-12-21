@@ -1,0 +1,14 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Sidebar </title>
+	</head>
+	<body>
+		<form action="/aggregator/sidebar/" method="POST">
+			{% csrf_token %}
+			<textarea name="sidebar" style="height: 500px; width: 30%;">{{ sidebar }}</textarea>
+			<br />
+			<input type="submit" name="submit" value="Update Sidebar" />
+		</form>
+</body>
+</html>
