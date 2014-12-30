@@ -30,7 +30,6 @@ def index(request):
 				bridal_fashion = make_post_list_by_cat('Bridal Fashion', 4)
 				context = {'post_content': post_content, 'post': article, 'categories': cats, 'breakcount': break_count, 'berta_bridal': berta_bridal, 'bridal_fashion': bridal_fashion, 'engagement_rings': engagement_rings, 'wedding_hair': wedding_hair, 'seasonal_weddings': seasonal_notables, 'boho_style': boho_style, 'claire_petibone': claire_petibone}
 				return render(request, 'aggregator/home/article_extended.html', context)
-		return HttpResponseRedirect('http://admin.crazyforus.com')
 		''' This is the home page using the word press db '''
 		cat_list = set_all_categories()
 		posts = WpPosts.objects.using('wp_crazy').filter(post_parent=0).filter(post_type='post').filter(post_status='publish').exclude(post_title='Auto Draft').order_by('-post_date')[:20]

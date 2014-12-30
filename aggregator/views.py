@@ -12,6 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.template.defaultfilters import slugify
 
 def index(request):
+		return HttpResponse("Done")
 		return HttpResponseRedirect('http://admin.crazyforus.com')
 		d = datetime.now()
 		week_ago = timedelta(days=7)

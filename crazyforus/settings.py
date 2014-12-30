@@ -9,7 +9,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-PROJECT_ROOT = "/www/sites/crazyforus.com"
+PROJECT_ROOT = "/www/sites/dev.crazyforus.com/crazyforus"
 
 DATABASES = {
     'default': {
@@ -70,7 +70,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '/www/sites/crazyforus.com/media/'
+MEDIA_ROOT = '/www/sites/dev.crazyforus.com/crazyforus/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -92,11 +92,11 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-		'/www/sites/crazyforus.com/static/',
-		'/www/sites/crazyforus.com/aggregator/static/',
-		'/www/sites/crazyforus.com/register/static/',
-		'/www/sites/crazyforus.com/vendors/static/',
-		'/www/sites/crazyforus.com/ckeditor/',
+		'/www/sites/dev.crazyforus.com/crazyforus/static/',
+		'/www/sites/dev.crazyforus.com/crazyforus//aggregator/static/',
+		'/www/sites/dev.crazyforus.com/crazyforus/register/static/',
+		'/www/sites/dev.crazyforus.com/crazyforus/vendors/static/',
+		'/www/sites/dev.crazyforus.com/crazyforus/ckeditor/',
 )
 
 # List of finder classes that know how to find static files in
@@ -136,11 +136,11 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-		'/www/sites/crazyforus.com/aggregator/templates',
-		'/www/sites/crazyforus.com/vendors/templates',
-		'/www/sites/crazyforus.com/register/templates',
-		'/www/sites/crazyforus.com/login/templates',
-		'/www/sites/crazyforus.com/couples/templates',
+		'/www/sites/dev.crazyforus.com/crazyforus/aggregator/templates',
+		'/www/sites/dev.crazyforus.com/crazyforus/vendors/templates',
+		'/www/sites/dev.crazyforus.com/crazyforus/register/templates',
+		'/www/sites/dev.crazyforus.com/crazyforus/login/templates',
+		'/www/sites/dev.crazyforus.com/crazyforus/couples/templates',
 )
 
 INSTALLED_APPS = (
