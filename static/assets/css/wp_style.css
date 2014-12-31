@@ -1041,6 +1041,15 @@ body.nav-expanded #page-header-mobile nav {
     float: left;
 }
 
+#page-content .col-sm-8 article {
+		height: 301px;
+		overflow: hidden;
+}
+
+#page-content .col-sm-8 img {
+	width: 100%;
+}
+
 #page-slider .col-sm-8 {
     padding-right: 1px;
 }
@@ -1050,7 +1059,7 @@ body.nav-expanded #page-header-mobile nav {
 }
 
 #page-slider .col-sm-4 article {
-    height: 150px;
+    height: 452px;
     margin: 1px 0 0 0;
 }
 
@@ -1146,6 +1155,15 @@ body.nav-expanded #page-header-mobile nav {
     
     #page-slider .col-sm-4 {
         padding-left: 0px;
+    }
+
+		#page-slider .col-sm-4 article .image_wrap_featured {
+				height: 452px;
+				overflow: hidden;
+		}
+
+    #page-slider .col-sm-4 article .image_wrap_featured img {
+        width: 100%;
     }
 
 		.image-wrapper-case {

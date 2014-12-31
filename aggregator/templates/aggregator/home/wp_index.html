@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="/static/assets/css/jquery.sidr.dark.css">
     <link rel="stylesheet" href="/static/assets/css/photobox.css">
     <link rel="stylesheet" href="/static/assets/css/datepicker.css">
-    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/wp_style.css">
     <link rel="stylesheet" href="/static/assets/css/colors.css">
     
     <!-- end:stylesheets -->
@@ -606,20 +606,6 @@
                                     <!-- start:submenu-lifestyle -->
                                     <!-- end:submenu-lifestyle -->
                                 </li>
-                                <li class="cat-tech">
-                                    <a href="#">Invitations</a>
-                                    <!-- start:submenu-tech -->
-                                    <div class="dropnav-container">
-                                        <ul class="dropnav-menu">
-                                            <li><a href="#">Gadgets</a></li>
-                                            <li><a href="#">Mobile</a></li>
-                                            <li><a href="#">Internet</a></li>
-                                            <li><a href="#">Security</a></li>
-                                            <li><a href="#">Technocast</a></li>
-                                        </ul>                                        
-                                    </div>
-                                    <!-- end:submenu-tech -->
-                                </li>
                                 <li class="cat-business">
                                     <a href="#">Contact us</a>
                                 </li>
@@ -681,7 +667,7 @@
             <!-- end:page header -->
 
             <!-- start:page slider -->
-            <div id="page-slider" class="clearfix">
+            <div id="page-slider" class="clearfix" style="margin-top: 15px;">
                 
                 <!-- start:container -->
                 <div class="container">
@@ -693,17 +679,19 @@
                             <div class="col-sm-6">
                                 
                                 <article class="linkbox large cat-sports">
-																	<a href="/articles/{{ ordered_arr.0.news_info.slug }}">
-																		<img src="{{ ordered_arr.0.featured_image.link_name }}_570x452.{{ ordered_arr.0.featured_image.extension }}" width="570" height="452" alt="{{ ordered_arr.0.news_info.tags }}" class="img-responsive" />
+																	<a href="/articles/{{ post_list.0.slug }}">
+																		<div class="image_wrap_featured">
+																			<img src="{{ post_list.0.featured_image }}" width="570" height="452" alt="{{ post_list.0.tags }}" class="img-responsive" />
+																		</div>
                                         <div class="overlay">
-																					<h2>{{ ordered_arr.0.news_info.title }}</h2>
-																					<p>{{ ordered_arr.0.article_short|striptags }}...</p>
                                         </div>
                                     </a>
                                     <a href="#" class="theme">
-																			{{ ordered_arr.0.first_cat }}
+																			{{ post_list.0.first_cat }}
                                     </a>
                                 </article>
+																					<h2>{{ post_list.0.title|safe }}</h2>
+																					<p>{{ post_list.0.post_content|striptags }}...</p>
     
                             </div>
                             <!-- end:col -->
@@ -712,40 +700,19 @@
                             <div class="col-sm-4">
                                 
                                 <article class="linkbox cat-sports">
-																<a href="/articles/{{ ordered_arr.1.news_info.slug">
-																			<img src="{{ ordered_arr.1.featured_image.link_name }}_350x150.{{ ordered_arr.1.featured_image.extension }}" width="560" height="390" alt="Responsive Image" class="img-responsive" />
+																<a href="/articles/{{ post_list.1.slug }}">
+																	<div class="image_wrap_featured">
+																		<img src="{{ post_list.1.featured_image }}" width="560" height="452" alt="{{ post_list.1.title }}" class="img-responsive" />
+																	</div>
                                         <div class="overlay">
-																						<h3>{{ ordered_arr.1.news_info.title }}</h3>
                                         </div>
                                     </a>
                                     <a href="#" class="theme">
-																				{{ ordered_arr.1.first_cat }}
+																				{{ post_list.1.first_cat }}
                                     </a>
                                 </article>
-                                
-                                <article class="linkbox cat-sports">
-                                    <a href="#">
-																			<img src="{{ ordered_arr.2.featured_image.link_name }}_350x150.{{ ordered_arr.2.featured_image.extension }}" width="560" height="390" alt="Responsive Image" class="img-responsive" />
-                                        <div class="overlay">
-																						<h3>{{ ordered_arr.2.news_info.title }}</h3>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="theme">
-																				{{ ordered_arr.2.first_cat }}
-                                    </a>
-                                </article>
-                                
-                                <article class="linkbox cat-sports">
-                                    <a href="#">
-																			<img src="{{ ordered_arr.3.featured_image.link_name }}_350x150.{{ ordered_arr.3.featured_image.extension }}" width="560" height="390" alt="Responsive Image" class="img-responsive" />
-                                        <div class="overlay">
-																						<h3>{{ ordered_arr.3.news_info.title }}</h3>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="theme">
-																				{{ ordered_arr.3.first_cat }}
-                                    </a>
-                                </article>
+																						<h3>{{ post_list.1.title|safe }}</h3>
+																						<p>{{ post_list.1.post_content|striptags }}...</p>
     
                             </div>
                             <!-- end:col -->
@@ -778,15 +745,15 @@
                                 
                                 <article class="linkbox large cat-news">
                                     <a href="#">
-																				<img src="{{ ordered_arr.4.featured_image.link_name }}_560x490.{{ ordered_arr.4.featured_image.extension }}" width="560" height="390" alt="Responsive Image" class="img-responsive" />
+																				<img src="{{ post_list.2.featured_image }}" width="560" height="390" alt="Responsive Image" class="img-responsive" />
                                         <div class="overlay">
-																						<h2>{{ ordered_arr.4.news_info.title }}</h4>
                                         </div>
                                     </a>
                                     <a href="#" class="theme">
-																				{{ ordered_arr.4.first_cat }}
+																				{{ post_list.2.first_cat }}
                                     </a>
                                 </article>
+																						<h2>{{ post_list.2.title }}</h2>
                                 
                                 <!-- start:row -->
                                 <div class="row bottom-margin">
@@ -795,18 +762,18 @@
                                         <!-- start:col -->
                                         <div class="col-sm-6">
                                             <div class="thumb-wrap relative">
-																								<a href="#"><img src="{{ ordered_arr.5.featured_image.link_name }}_265x165.{{ ordered_arr.5.featured_image.extension }}" width="265" height="160" alt="Responsive Image" class="img-responsive" /></a>
+																								<a href="#"><img src="{{ post_list.3.featured_image }}" width="265" height="160" alt="Responsive Image" class="img-responsive" /></a>
                                                 <a href="#" class="theme">
-																										{{ ordered_arr.5.first_cat }}
+																										{{ post_list.3.first_cat }}
                                                 </a>
                                             </div>
                                         </div>
                                         <!-- end:col -->
                                         <!-- start:col -->
                                         <div class="col-sm-6">
-																						<h3><a href="#">{{ ordered_arr.5.news_info.title }}</a></h3>
-																						<span class="published">{{ ordered_arr.5.article_date }} | 23 <a href="#">comments</a></span>
-																						<span class="text">{{ ordered_arr.5.article_short }}...</span>                                                                                    
+																						<h3><a href="#">{{ post_list.3.title }}</a></h3>
+																						<span class="published">{{ post_list.3.article_date }} | 23 <a href="#">comments</a></span>
+																						<span class="text">{{ post_list.3.post_content|striptags }}...</span>                                                                                    
                                         </div>
                                         <!-- end:col -->
                                     </article>
@@ -823,16 +790,16 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-																								<img src="{{ ordered_arr.6.featured_image.link_name }}_265x160.{{ ordered_arr.6.featured_image.extension }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
+																								<img src="{{ post_list.4.featured_image }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
                                                 <div class="overlay">
-																									<h3>{{ ordered_arr.6.article_short }}</h3>
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-																								{{ ordered_arr.6.first_cat }}
+																								{{ post_list.4.first_cat }}
                                             </a>
                                         </article>
                                         <!-- end:article.linkbox -->
+																								<h3>{{ post_list.4.title|safe }}</h3>
                                     </div>
                                     <!-- end:col -->
                                     <!-- start:col -->
@@ -840,15 +807,15 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-																								<img src="{{ ordered_arr.7.featured_image.link_name }}_265x160.{{ ordered_arr.7.featured_image.extension }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
+																								<img src="{{ post_list.5.featured_image }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
                                                 <div class="overlay">
-                                                    <h3>Lorem ipsum dolor sit amet</h3>
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-																								{{ ordered_arr.7.first_cat }}
+																								{{ post_list.5.first_cat }}
                                             </a>
                                         </article>
+																								<h3>{{ post_list.5.title|safe }}</h3>
                                         <!-- end:article.linkbox -->                              
                                     </div>
                                     <!-- end:col -->
@@ -862,15 +829,15 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-																								<img src="{{ ordered_arr.8.featured_image.link_name }}_265x160.{{ ordered_arr.8.featured_image.extension }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
+																								<img src="{{ post_list.6.featured_image }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
                                                 <div class="overlay">
-																										<h3>{{ ordered_arr.8.news_info.title }}</h3>
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-                                                {{ ordered_arr.8.first_cat }}
+                                                {{ post_list.6.first_cat }}
                                             </a>
                                         </article>
+																										<h3>{{ post_list.6.title|safe }}</h3>
                                         <!-- end:article.linkbox -->
                                     </div>
                                     <!-- end:col -->
@@ -879,15 +846,15 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-																								<img src="{{ ordered_arr.9.featured_image.link_name }}_265x160.{{ ordered_arr.9.featured_image.extension }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
+																								<img src="{{ post_list.7.featured_image }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
                                                 <div class="overlay">
-																										<h3>{{ ordered_arr.9.news_info.title }}</h3>
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-                                                {{ ordered_arr.9.first_cat }}
+                                                {{ post_list.7.first_cat }}
                                             </a>
                                         </article>
+																										<h3>{{ post_list.7.title }}</h3>
                                         <!-- end:article.linkbox -->                              
                                     </div>
                                     <!-- end:col -->
@@ -901,15 +868,15 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-																								<img src="{{ ordered_arr.10.featured_image.link_name }}_265x160.{{ ordered_arr.10.featured_image.extension }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
+																								<img src="{{ post_list.8.featured_image }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
                                                 <div class="overlay">
-																										<h3>{{ ordered_arr.10.article_short }}</h3>
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-																								{{ ordered_arr.10.first_cat }}
+																								{{ post_list.8.first_cat }}
                                             </a>
                                         </article>
+																										<h3>{{ post_list.8.title }}</h3>
                                         <!-- end:article.linkbox -->
                                     </div>
                                     <!-- end:col -->
@@ -918,110 +885,22 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-																								<img src="{{ ordered_arr.11.featured_image.link_name }}_265x160.{{ ordered_arr.11.featured_image.extension }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
+																								<img src="{{ post_list.9.featured_image }}" width="265" height="160" alt="Responsive Image" class="img-responsive" />
                                                 <div class="overlay">
-																										<h3>{{ ordered_arr.11.news_info.title }}</h3>
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-																								{{ ordered_arr.11.first_cat }}
+																								{{ post_list.9.first_cat }}
                                             </a>
                                         </article>
+																										<h3>{{ post_list.9.news_info.title }}</h3>
                                         <!-- end:article.linkbox -->                              
                                     </div>
                                     <!-- end:col -->
                                 </div>
                                 <!-- end:row -->
-                                
-                                
-                                                                <!-- start:business-news -->
-                                <section class="section-full cat-business-light news-layout news-lay-1 relative">
-                                    
-                                    <a href="#" class="theme cat-business">
-                                        Business
-                                    </a>
-                                    
-                                    <!-- start:row -->
-                                    <div class="row">
-                                        
-                                        <!-- start:col -->
-                                        <div class="col-xs-4">
-                                            <!-- start:article.linkbox -->
-                                            <article>                                        
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>
-                                                <span class="published">March 18, 2014</span>
-                                                <span class="text">Aliquam sollicitudin, enim sit amet hendrerit consequat, velit orci posuere elit, eu facilisis lacus odio ac nunc.</span>                                                                                    
-                                            </article>
-                                            <!-- end:article.linkbox -->
-                                            
-                                            <!-- start:article -->
-                                            <article>                                        
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                            <!-- start:article -->
-                                            <article>                                        
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
-                                            </article>
-                                            <!-- end:article -->
-                                        </div>
-                                        <!-- end:col -->
-                                        
-                                        <!-- start:col -->
-                                        <div class="col-xs-4">
-                                            <!-- start:article.linkbox -->
-                                            <article>                                        
-                                                <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
-                                                <span class="published">February 18, 2014</span>
-                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
-                                            </article>
-                                            <!-- end:article.linkbox -->
-                                            
-                                            <!-- start:article -->
-                                            <article>                                        
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                            <!-- start:article -->
-                                            <article>                                        
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
-                                            </article>
-                                            <!-- end:article -->
-                                        </div>
-                                        <!-- end:col -->
-                                        
-                                        <!-- start:col -->
-                                        <div class="col-xs-4">
-                                            <!-- start:article.linkbox -->
-                                            <article>                                        
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>
-                                                <span class="published">March 18, 2014</span>
-                                                <span class="text">Aliquam sollicitudin, enim sit amet hendrerit consequat, velit orci posuere elit, eu facilisis lacus odio ac nunc.</span>                                                                                    
-                                            </article>
-                                            <!-- end:article.linkbox -->
-                                            
-                                            <!-- start:article -->
-                                            <article>                                        
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                            <!-- start:article -->
-                                            <article>                                        
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat lectus</a></h3>                                                                              
-                                            </article>
-                                            <!-- end:article -->
-                                        </div>
-                                        <!-- end:col -->
-                                        
-                                        
-                                    </div>
-                                    <!-- end:row -->
-                                </section>
-                                <!-- end:business-news -->                                
-                                                                <!-- start:videos -->
+
+																<!-- start:videos -->
                                 <section class="section-full cat-videos no-padding">
                                     
                                     <!-- start:row -->
@@ -1032,15 +911,15 @@
                                             
                                             <article class="linkbox cat-showtime">
                                                 <a href="#">
-                                                    <img src="/static/images/dummy/334x301.jpg" width="334" height="301" alt="Responsive image" class="img-responsive" />
+																									<img src="{{ post_list.10.featured_image }}" width="334" height="301" alt="Responsive image" class="img-responsive" />
                                                     <div class="overlay">
-                                                        <h2>A wonderful serenity has taken possession </h2>
                                                     </div>
                                                 </a>
                                                 <a href="#" class="theme">
-                                                    Showtime
+																										{{ post_list.10.first_cat }}
                                                 </a>
                                             </article>
+																												<h2>{{ post_list.10.title }}
                 
                                         </div>
                                         <!-- end:col -->
@@ -1050,27 +929,31 @@
                                             
                                             <article class="linkbox cat-showtime">
                                                 <a href="#">
-                                                    <img src="/static/images/dummy/270x165.jpg" width="274" height="150" alt="Responsive image" class="img-responsive" />
+																									<div class="image-wrapper-274">
+																										<img src="{{ post_list.11.featured_image }}" width="274" height="150" alt="Responsive image" class="img-responsive" />
+																									</div>
                                                     <div class="overlay">
-                                                        <h3>Budget drops lower benefits, adds $56 billion in spending</h3>
                                                     </div>
                                                 </a>
                                                 <a href="#" class="theme">
-                                                    Showtime
+																										{{ post_list.11.first_cat }}
                                                 </a>
                                             </article>
+																												<h4>{{ post_list.11.title|safe }}</h4>
                                             
                                             <article class="linkbox cat-showtime">
                                                 <a href="#">
-                                                    <img src="/static/images/dummy/270x165.jpg" width="274" height="150" alt="Responsive image" class="img-responsive" />
+																									<div class="image-wrapper-274">
+																										<img src="{{ post_list.12.featured_image }}" width="274" height="150" alt="Responsive image" class="img-responsive" />
+																									</div>
                                                     <div class="overlay">
-                                                        <h3>Budget drops lower benefits, adds $56 billion in spending</h3>
                                                     </div>
                                                 </a>
                                                 <a href="#" class="theme">
-                                                    Showtime
+																										{{ post_list.12.first_cat }}
                                                 </a>
                                             </article>
+																												<h4>{{ post_list.12.title|safe }}</h4>
                 
                                         </div>
                                         <!-- end:col -->
@@ -1080,111 +963,7 @@
                                     
                                 </section>
                                 <!-- end:videos -->                                
-                                                                <!-- start:reviews -->
-                                <section class="section-full top-padding cat-reviews news-layout news-lay-2">
-                                    
-                                    <header>
-                                        <h2>Check out our latest reviews</h2>
-                                        <span class="borderline"></span>
-                                    </header>
-                                    
-                                    <!-- start:row -->
-                                    <div class="row">
-                                        
-                                        <!-- start:col -->
-                                        <div class="col-xs-6 col-sm-3">
-                                            <!-- start:article.linkbox -->
-                                            <article class="review">
-                                                <a href="#">
-                                                    <img src="/static/images/dummy/120x105.jpg" width="120" height="105" alt="Responsive image" class="img-responsive" />
-                                                    <h3>Aliquam sollicitudin enim sit hendrerit</h3>      
-                                                </a>
-                                                <div class="review-rating">
-                                                    <ul class="rating">
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li></li>
-                                                    </ul>
-                                                </div>
-                                            </article>
-                                            <!-- end:article.linkbox -->
-                                        </div>
-                                        <!-- end:col -->
-                                        
-                                        <!-- start:col -->
-                                        <div class="col-xs-6 col-sm-3">
-                                            <!-- start:article.linkbox -->
-                                            <article class="review">
-                                                <a href="#">
-                                                    <img src="/static/images/dummy/120x105.jpg" width="120" height="105" alt="Responsive image" class="img-responsive" />
-                                                    <h3>Maecenas in egestas ligula</h3>      
-                                                </a>
-                                                <div class="review-rating">
-                                                    <ul class="rating">
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                    </ul>
-                                                </div>
-                                            </article>
-                                            <!-- end:article.linkbox -->
-                                        </div>
-                                        <!-- end:col -->
-                                        
-                                        <!-- start:col -->
-                                        <div class="col-xs-6 col-sm-3">
-                                            <!-- start:article.linkbox -->
-                                            <article class="review">
-                                                <a href="#">
-                                                    <img src="/static/images/dummy/120x105.jpg" width="120" height="105" alt="Responsive image" class="img-responsive" />
-                                                    <h3>Ligula eu feugiat lectus</h3>      
-                                                </a>
-                                                <div class="review-rating">
-                                                    <ul class="rating">
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li></li>
-                                                        <li></li>
-                                                        <li></li>
-                                                    </ul>
-                                                </div>
-                                            </article>
-                                            <!-- end:article.linkbox -->
-                                        </div>
-                                        <!-- end:col -->
-                                        
-                                        <!-- start:col -->
-                                        <div class="col-xs-6 col-sm-3">
-                                            <!-- start:article.linkbox -->
-                                            <article class="review">
-                                                <a href="#">
-                                                    <img src="/static/images/dummy/120x105.jpg" width="120" height="105" alt="Responsive image" class="img-responsive" />
-                                                    <h3>Odio non volutpat pulvinar</h3>      
-                                                </a>
-                                                <div class="review-rating">
-                                                    <ul class="rating">
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li class="li-rated"></li>
-                                                        <li></li>
-                                                    </ul>
-                                                </div>
-                                            </article>
-                                            <!-- end:article.linkbox -->
-                                        </div>
-                                        <!-- end:col -->
-                                        
-                                        
-                                        
-                                    </div>
-                                    <!-- end:row -->
-                                </section>
-                                <!-- end:reviews -->        
+
                                 <!-- start:row -->
                                 <div class="row top-margin">
                                     <!-- start:col -->
