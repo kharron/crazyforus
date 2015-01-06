@@ -59,120 +59,28 @@
                 
                 <!-- start:sidr -->
                 <div id="sidr">
-                    <form id="search-form-mobile">
-                        <input type="text" name="qsearch" placeholder="Search Crazyforus" />
+										<form id="search-form-mobile" method="POST" action="/search/">
+											<input type="text" name="search_term" placeholder="Search CrazyForUs" /> {% csrf_token %}
                     </form>
                     <ul>
                         <li class="cat-news">
                             <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
-														<a href="/p=15709">Dresses</a>
-                            <ul class="subnav-menu">
-                                <li><a href="#">Rings</a></li>
-                                <li><a href="#">Shoes</a></li>
-                                <li><a href="#">Elections</a></li>
-                                <li><a href="#">Opinions</a></li>
-                                <li><a href="#">Lorem ipsum</a></li>
-                                <li><a href="#">Dolor sit amet</a></li>
-                                <li><a href="#">Photo galleries</a></li>
-                            </ul>               
+														<a href="/?p=15709">Dresses</a>
                         </li>
                         <li class="cat-sports">
                             <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
-                            <a href="category-1.html">Sports</a>
-                            <ul>
-                                <li><a href="#">Football</a></li>
-                                <li><a href="#">Pro Basketball</a></li>
-                                <li><a href="#">College Basketball</a></li>
-                                <li><a href="#">Hockey</a></li>
-                                <li><a href="#">Baseball</a></li>
-                                <li><a href="#">Soccer</a></li>
-                                <li><a href="#">Photo galleries</a></li>
-                            </ul>
+                            <a href="/?p=14670=">Rings</a>
                         </li>
                         <li class="cat-lifestyle">
                             <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
-                            <a href="#">Lifestyle</a>
-                            <ul>
-                                <li><a href="#">Fashion</a></li>
-                                <li><a href="#">Beauty</a></li>
-                                <li><a href="#">Health</a></li>
-                                <li><a href="#">Parenting</a></li>
-                                <li><a href="#">Home & garden</a></li>
-                            </ul>     
+                            <a href="/?p=16702">Celebrity</a>
                         </li>
-                        <li class="cat-showtime">
-                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
-                            <a href="category-2.html">Showtime</a>
-                            <ul>
-                                <li><a href="#">Movies</a></li>
-                                <li><a href="#">Music</a></li>
-                                <li><a href="#">Television</a></li>
-                                <li><a href="#">Gaming</a></li>
-                                <li><a href="#">Lorem ipsum</a></li>
-                                <li><a href="#">Dolor sit amet</a></li>
-                                <li><a href="#">Photo galleries</a></li>
-                            </ul> 
-                        </li>
-                        <li class="cat-tech">
-                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
-                            <a href="#">Tech</a>
-                            <ul>
-                                <li><a href="#">Gadgets</a></li>
-                                <li><a href="#">Mobile</a></li>
-                                <li><a href="#">Internet</a></li>
-                                <li><a href="#">Security</a></li>
-                                <li><a href="#">Technocast</a></li>
-                            </ul> 
-                        </li>
+												<!--
                         <li class="cat-business">
                             <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
-                            <a href="#">Business</a>
-                            <ul>
-                                <li><a href="#">Investments</a></li>
-                                <li><a href="#">Loans & guarantees</a></li>
-                                <li><a href="#">Human resources</a></li>
-                                <li><a href="#">Culture & media</a></li>
-                                <li><a href="#">Market rules</a></li>
-                            </ul>    
+                            <a href="/contact_us">Contact</a>
                         </li>
-                        <li class="cat-extra">
-                            <a class="more" href="#"><i class="fa fa-angle-down"></i></a>
-                            <a href="#">Extra +</a>
-                            <ul>
-                                <li><a href="archive.html">Archive page</a></li>
-                                <li><a href="author.html">Author page</a></li>
-                                <li><a href="contact.html">Contact page</a></li>
-                                <li>
-                                    <a href="#">Blog styles</a>
-                                    <ul>
-                                        <li><a href="category-1.html">Style one</a></li>
-                                        <li><a href="category-2.html">Style two</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Single post styles</a>
-                                    <ul>
-                                        <li><a href="article-1.html">Single post default</a></li>                                                    
-                                        <li><a href="article-2.html">Single post with photos</a></li>
-                                        <li><a href="article-3.html">Single post with review</a></li>
-                                        <li><a href="article-4.html">Single post with audio</a></li>
-                                        <li><a href="article-full-1.html">Full width style one</a></li>
-                                        <li><a href="article-full-2.html">Full width style two</a></li>
-                                        <li><a href="article-cover-1.html">Single post with cover photo</a></li>
-                                        <li><a href="article-cover-2.html">Single post with cover video</a></li>
-                                    </ul>    
-                                </li>
-                                <li>
-                                    <a href="#">Video & photo</a>
-                                    <ul>
-                                        <li><a href="video.html">Video page</a></li>
-                                        <li><a href="video-full.html">Video page - full width</a></li>
-                                        <li><a href="gallery.html">Gallery page</a></li>
-                                        <li><a href="gallery-full.html">Gallery page - full width</a></li>
-                                    </ul>    
-                                </li>                   
-                            </ul>            
-                        </li>
+												-->
                     </ul>
                     
                 </div>
@@ -255,9 +163,11 @@
                                 <li class="cat-lifestyle">
 																		<a href="/?p=16702">Celebrity</a>
                                 </li>
+																<!--
                                 <li class="cat-business">
                                     <a href="#">Contact us</a>
                                 </li>
+																-->
 
 																<!--
                                 <li class="cat-extra">
