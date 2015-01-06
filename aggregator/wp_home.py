@@ -167,7 +167,8 @@ def category_view(request, category=None):
 				seasonal_notables = make_post_list_by_cat('Winter Weddings', 4)
 				photo_ideas = make_post_list_by_cat('PHOTO IDEAS', 4)
 				centerpieces = make_post_list_by_cat('Centerpieces &amp; Tablescapes', 4)
-				content = {'articles': cat_list, 'photo_ideas': photo_ideas, 'centerpieces': centerpieces, 'seasonal_weddings': seasonal_notables, 'wedding_hair': wedding_hair[:4]}
+				article_odd_count = len(cat_list)%2
+				content = {'articles': cat_list, 'article_odd_count': article_odd_count, 'photo_ideas': photo_ideas, 'centerpieces': centerpieces, 'seasonal_weddings': seasonal_notables, 'wedding_hair': wedding_hair[:4]}
 				return render(request, 'aggregator/home/category_results.html', content)
 		return render(request, 'aggregator/home/category_results.html')
 

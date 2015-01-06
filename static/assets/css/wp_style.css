@@ -592,6 +592,7 @@ body.nav-expanded #page-header-mobile nav {
 
 /**
  * Color Palette
+ * ce94b1 - darker header bg
  * bcd2cf | a0b9b6 | f7dfbf | e5c7a1 | 7f7d7a | c2c2c1
  */
 
@@ -612,7 +613,7 @@ body.nav-expanded #page-header-mobile nav {
 #header-branding {
     position: relative;
     height: 100px;
-    background: #f7dfbf;
+    background: #e7b4ce;
     border-top: 5px solid #3a3a3a;
     border-bottom: 1px solid #4d4d4d;
     overflow: hidden;
@@ -628,7 +629,7 @@ body.nav-expanded #page-header-mobile nav {
  */
 
 #search-form {
-	/* Border shade #d3b897 border line #968064 */
+	/* Border shade #ce94b1 border line #968064 */
 		float: left;
     width: 220px;
     height: 40px;
@@ -638,8 +639,8 @@ body.nav-expanded #page-header-mobile nav {
     padding: 0 10px;
     -webkit-border-radius: 25px 25px 25px 25px;
     border-radius: 25px 25px 25px 25px;
-    -webkit-box-shadow:inset 0 3px 0 0 #d3b897;
-    box-shadow:inset 0 3px 0 0 #d3b897;
+    -webkit-box-shadow:inset 0 3px 0 0 #ce94b1;
+    box-shadow:inset 0 3px 0 0 #ce94b1;
     overflow: hidden;
 }
 
@@ -647,7 +648,7 @@ body.nav-expanded #page-header-mobile nav {
     line-height: 36px;
     height: 36px;
     color: #968064; /* Input font color */
-    background: #e5c7a1;
+    background: #ce94b1;
     border: none;
     width: 150px;
     padding: 0 5px;
@@ -658,7 +659,7 @@ body.nav-expanded #page-header-mobile nav {
     line-height: 36px;
     height: 36px;
     color: #968064; /* magnifying glass color */
-    background: #e5c7a1;
+    background: #ce94b1;
     border: none;
     width: 30px;
 }
@@ -730,7 +731,7 @@ body.nav-expanded #page-header-mobile nav {
 #header-navigation {
     position: relative;
     height: 50px;
-    background: #e5c7a1;
+    background: #ce94b1;
 }
 
 #header-navigation .container {
@@ -1172,6 +1173,21 @@ body.nav-expanded #page-header-mobile nav {
 			margin: 3px 12px 3px 0px;
 		}
 
+		.image-wrapper-case-160 {
+			width: 160px;
+			float: left;
+			margin: 3px 0px 3px 0px;
+		}
+
+		.image-wrapper-160 {
+				height: 160px;
+				overflow: hidden;
+		}
+		
+		.image-wrapper-160 img {
+				width: 100%;
+		}
+		
 		.image-wrapper-100 {
 				height: 80px;
 				overflow: hidden;
@@ -1187,6 +1203,15 @@ body.nav-expanded #page-header-mobile nav {
 		}
 		
 		.image-wrapper-265 img {
+				width: 100%;
+		}
+
+		.image-wrapper-390 {
+				height: 390px;
+				overflow: hidden;
+		}
+
+		.image-wrapper-390 img {
 				width: 100%;
 		}
 
